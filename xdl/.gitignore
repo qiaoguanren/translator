@@ -1,0 +1,37 @@
+# Project dirs
+data/
+stuff/
+build/
+documentation/_build
+documentation/public
+documentation/xdl_autodoc
+public/
+
+# Python
+.ipynb_checkpoints
+*.pyc
+*.pyo
+__pycache__/
+build
+xdl.egg-info
+
+logs
+lidocaine
+tests/chempiler_output/
+tests/unit/chempiler_output
+
+# other
+.vscode
+chempiler_output/
+test_output/
+*.xdlexe
+*.xsd
+.coverage
+log_files
+
+# Allows
+!tests/unit/files/xdlexe_test_iso8891.xdlexe
+!tests/unit/files/xdlexe_test_missing_properties.xdlexe
+!tests/unit/files/xdlexe_test_dynamic_steps.xdlexe
+!tests/unit/files/repeat_parent.xdlexe
+!*.flake8*

@@ -1,0 +1,26 @@
+<Synthesis>
+  <Hardware>
+    <Component
+      id="filter"
+      type="filter"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent id="ether" />
+  </Reagents>
+
+  <Procedure>
+    <Filter
+      filter_vessel="filter"
+      stir_speed="565"
+    />
+    <Filter
+      filter_vessel="filter"
+      stir="True"
+      stir_speed="565"
+    />
+
+  </Procedure>
+
+</Synthesis>

@@ -1,0 +1,4 @@
+networkx==2.2
+appdirs==1.4.3
+git+ssh://git@gitlab.com/croningroup/chemputer/chempiler.git
+tabulate

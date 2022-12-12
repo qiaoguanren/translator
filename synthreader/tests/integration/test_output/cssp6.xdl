@@ -1,0 +1,128 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="filter"
+      type="filter" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="4 methylaniline" />
+    <Reagent
+      id="6M HCl" />
+    <Reagent
+      id="NaCl" />
+    <Reagent
+      id="NaOH acetic acid solution" />
+    <Reagent
+      id="acetic acid" />
+    <Reagent
+      id="aqueous 2M NaOH" />
+    <Reagent
+      id="ninhydrin acetic acid solution" />
+    <Reagent
+      id="the phenol" />
+    <Reagent
+      id="water" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="ninhydrin acetic acid solution"
+      vessel="filter"
+      volume="0" />
+    <Add
+      reagent="the phenol"
+      vessel="filter"
+      volume="0" />
+    <HeatChill
+      vessel="filter"
+      temp="100.0"
+      time="2 hrs"
+      stir="True" />
+    <HeatChillToTemp
+      vessel="filter"
+      temp="25.0"
+      stir="True" />
+    <Filter
+      filter_vessel="filter" />
+    <WashSolid
+      vessel="filter"
+      solvent="acetic acid"
+      volume="20 mL"
+      temp="2.0" />
+    <Dry
+      vessel="filter" />
+    <Add
+      reagent="NaOH acetic acid solution"
+      vessel="filter"
+      volume="0" />
+    <Add
+      reagent="4 methylaniline"
+      vessel="filter"
+      volume="0" />
+    <HeatChill
+      vessel="filter"
+      temp="100.0"
+      time="12 hrs"
+      stir="True" />
+    <HeatChillToTemp
+      vessel="filter"
+      temp="25.0"
+      active="False"
+      continue_heatchill="False"
+      stir="True" />
+    <Filter
+      filter_vessel="filter" />
+    <WashSolid
+      vessel="filter"
+      solvent="acetic acid"
+      volume="20 mL"
+      temp="2.0" />
+    <Dry
+      vessel="filter" />
+    <Add
+      reagent="aqueous 2M NaOH"
+      vessel="filter"
+      volume="0" />
+    <Add
+      reagent="NaCl"
+      vessel="filter"
+      volume="0" />
+    <HeatChill
+      vessel="filter"
+      temp="100.0"
+      time="15 mins"
+      stir="True" />
+    <Filter
+      filter_vessel="filter" />
+    <WashSolid
+      vessel="filter"
+      solvent="water"
+      volume="20 mL" />
+    <Dry
+      vessel="filter" />
+    <HeatChillToTemp
+      vessel="filter"
+      temp="25.0"
+      stir="True" />
+    <Add
+      reagent="6M HCl"
+      vessel="filter"
+      volume="0" />
+    <Filter
+      filter_vessel="filter" />
+    <WashSolid
+      vessel="filter"
+      solvent="water"
+      volume="20 mL"
+      temp="10.0" />
+    <Dry
+      vessel="filter" />
+    <Recrystallize
+      vessel="filter" />
+  </Procedure>
+
+</Synthesis>

@@ -1,0 +1,45 @@
+<Synthesis>
+  <Hardware>
+    <Component
+      id="rotavap"
+      type="rotavap"
+    />
+    <Component
+      id="reactor"
+      type="reactor"
+    />
+
+  </Hardware>
+
+  <Reagents>
+    <Reagent id="ether" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      vessel="rotavap"
+      reagent="ether"
+      volume="15 mL" />
+    <Transfer
+      from_vessel="rotavap"
+      to_vessel="reactor"
+      volume="all"
+    />
+    <Transfer
+      from_vessel="reactor"
+      to_vessel="rotavap"
+      volume="all"
+    />
+    <Evaporate
+      rotavap_name="rotavap"
+      mode="auto"
+      time="30 mins"
+    />
+    <Transfer
+      from_vessel="rotavap"
+      to_vessel="reactor"
+      volume="all"
+    />
+  </Procedure>
+
+</Synthesis>

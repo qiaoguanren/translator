@@ -1,0 +1,27 @@
+<Synthesis>
+  <Hardware>
+    <Component
+      id="rotavap"
+      type="rotavap"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="water" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="water"
+      vessel="rotavap"
+      volume="500 mL" />
+    <Evaporate
+      rotavap_name="rotavap"
+      temp="40"
+      pressure="50"
+      has_chiller="False"/>
+
+  </Procedure>
+
+</Synthesis>

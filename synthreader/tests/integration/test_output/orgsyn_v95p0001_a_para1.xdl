@@ -1,0 +1,118 @@
+<?xdl version="0.1.10" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="cartridge_anhydrous MgSO4"
+      type="cartridge"
+      chemical="anhydrous MgSO4" />
+    <Component
+      id="filter"
+      type="filter" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+    <Component
+      id="separator"
+      type="separator" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="1 M HCl" />
+    <Reagent
+      id="acetophenone" />
+    <Reagent
+      id="brine" />
+    <Reagent
+      id="ethanol" />
+    <Reagent
+      id="ethyl acetate" />
+    <Reagent
+      id="hydroxylamine hydrochloride" />
+    <Reagent
+      id="pyridine" />
+    <Reagent
+      id="water" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="acetophenone"
+      vessel="filter"
+      volume="9.33 mL"
+      stir="False" />
+    <Add
+      reagent="pyridine"
+      vessel="filter"
+      volume="18 mL"
+      stir="True" />
+    <Add
+      reagent="ethanol"
+      vessel="filter"
+      volume="40 mL"
+      stir="True" />
+    <Add
+      reagent="hydroxylamine hydrochloride"
+      vessel="filter"
+      mass="8.33 g"
+      stir="True" />
+    <HeatChill
+      vessel="filter"
+      temp="60°C"
+      time="1.25 hrs" />
+    <HeatChillToTemp
+      vessel="filter"
+      temp="22°C" />
+    <Add
+      reagent="water"
+      vessel="filter"
+      volume="80 mL"
+      stir="True" />
+    <Separate
+      purpose="extract"
+      from_vessel="filter"
+      separation_vessel="separator"
+      to_vessel="separator"
+      product_bottom="False"
+      solvent="ethyl acetate"
+      from_port="bottom"
+      to_port="top"
+      solvent_volume="80 mL"
+      n_separations="2" />
+    <Separate
+      purpose="wash"
+      from_vessel="separator"
+      separation_vessel="separator"
+      to_vessel="separator"
+      product_bottom="False"
+      solvent="1 M HCl"
+      to_port="top"
+      solvent_volume="50 mL"
+      n_separations="1" />
+    <Separate
+      purpose="wash"
+      from_vessel="separator"
+      separation_vessel="separator"
+      to_vessel="filter"
+      product_bottom="False"
+      solvent="brine"
+      through="anhydrous MgSO4"
+      to_port="top"
+      solvent_volume="50 mL"
+      n_separations="1" />
+    <Filter
+      filter_vessel="filter" />
+    <Transfer
+      from_vessel="filter"
+      to_vessel="rotavap"
+      volume="all"
+      from_port="bottom"
+      to_port="evaporate" />
+    <Evaporate
+      rotavap_name="rotavap"
+      time="30 mins"
+      mode="auto" />
+  </Procedure>
+
+</Synthesis>

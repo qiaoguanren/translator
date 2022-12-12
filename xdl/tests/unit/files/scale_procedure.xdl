@@ -1,0 +1,31 @@
+<Synthesis>
+  <Hardware>
+    <Component
+      id="rotavap"
+      type="rotavap"
+    />
+    <Component
+      id="reactor"
+      type="reactor"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="ether" />
+    <Reagent
+      id="water" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="ether"
+      vessel="reactor"
+      volume="20 mL" />
+    <CleanVessel
+      vessel="rotavap"
+      solvent="water"
+      volume="10 mL" />
+  </Procedure>
+
+</Synthesis>

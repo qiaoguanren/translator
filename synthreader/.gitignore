@@ -1,0 +1,17 @@
+# Project dirs
+virtualenv
+syntranslate.egg-info
+synthreader/tagging/reagents/data/chemical_names.txt
+
+# Python
+.ipynb_checkpoints
+*.pyc
+*.pyo
+__pycache__/
+
+synthreader.egg-info
+
+# Other
+.vscode
+.mypy_cache
+.pytest_cache

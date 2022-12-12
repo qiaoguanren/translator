@@ -1,0 +1,59 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="cartridge_celite"
+      type="cartridge"
+      chemical="celite" />
+    <Component
+      id="filter"
+      type="filter" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="Cu2O" />
+    <Reagent
+      id="benzene" />
+    <Reagent
+      id="trifluoromethanesulphonic anhydride" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="Cu2O"
+      vessel="filter"
+      mass="3.64 g" />
+    <Evacuate
+      vessel="filter" />
+    <Add
+      reagent="benzene"
+      vessel="filter"
+      volume="150 mL" />
+    <Add
+      reagent="trifluoromethanesulphonic anhydride"
+      vessel="filter"
+      mass="10 g"
+      stir="True" />
+    <HeatChill
+      vessel="filter"
+      temp="80.1"
+      time="16 hrs"
+      stir="True" />
+    <FilterThrough
+      from_vessel="filter"
+      to_vessel="filter"
+      through="celite" />
+    <Filter
+      filter_vessel="filter" />
+    <WashSolid
+      vessel="filter"
+      solvent="benzene"
+      volume="20 mL"
+      repeat="2" />
+    <Dry
+      vessel="filter" />
+  </Procedure>
+
+</Synthesis>

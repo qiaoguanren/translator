@@ -1,0 +1,102 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="cartridge_K2CO3"
+      type="cartridge"
+      chemical="K2CO3" />
+    <Component
+      id="reactor"
+      type="reactor" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+    <Component
+      id="separator"
+      type="separator" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="CH2Cl2" />
+    <Reagent
+      id="MeCN" />
+    <Reagent
+      id="N-(3,4-Dimethoxyphenethyl)pent-4-enamide" />
+    <Reagent
+      id="POCl3" />
+    <Reagent
+      id="aqueous saturated K2CO3 solution" />
+  </Reagents>
+
+  <Procedure>
+    <Confirm
+      msg="Is N- ( 3,4-Dimethoxyphenethyl ) pent-4-enamide ( 23.730 g , 90.0 mmol ) in the correct vessel?" />
+    <Dissolve
+      vessel="reactor"
+      solvent="MeCN"
+      volume="550 mL" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="23.0"
+      stir="True" />
+    <Add
+      reagent="POCl3"
+      vessel="reactor"
+      volume="63.5 mL"
+      stir="True" />
+    <HeatChill
+      vessel="reactor"
+      temp="95.0"
+      time="4 hrs"
+      stir="True" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="25.0"
+      stir="True" />
+    <Transfer
+      from_vessel="reactor"
+      to_vessel="rotavap"
+      volume="all" />
+    <Evaporate
+      rotavap_name="rotavap"
+      temp="50.0"
+      pressure="153.0"
+      time="30 mins"
+      mode="auto" />
+    <Transfer
+      from_vessel="rotavap"
+      to_vessel="reactor"
+      volume="all" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="2.0"
+      stir="True" />
+    <Add
+      reagent="aqueous saturated K2CO3 solution"
+      vessel="reactor"
+      volume="500 mL"
+      dispense_speed="10.0"
+      stir="True" />
+    <StopHeatChill
+      vessel="reactor" />
+    <Separate
+      purpose="extract"
+      from_vessel="reactor"
+      separation_vessel="separator"
+      to_vessel="rotavap"
+      product_bottom="True"
+      solvent="CH2Cl2"
+      through="K2CO3"
+      solvent_volume="200 mL"
+      n_separations="5" />
+    <Evaporate
+      rotavap_name="rotavap"
+      temp="50.0"
+      pressure="699.0"
+      time="30 mins"
+      mode="auto" />
+  </Procedure>
+
+</Synthesis>

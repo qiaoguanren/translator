@@ -1,0 +1,83 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="filter"
+      type="filter" />
+    <Component
+      id="reactor"
+      type="reactor" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="benzene" />
+    <Reagent
+      id="n-hexane" />
+    <Reagent
+      id="phenol" />
+    <Reagent
+      id="sodium hydride benzene solution" />
+    <Reagent
+      id="titanocene dichloride" />
+  </Reagents>
+
+  <Procedure>
+    <Confirm
+      msg="Is Titanocene dichloride ( 1.0 g , 4.0 mmol ) in the correct vessel?" />
+    <Confirm
+      msg="Is phenol ( 0.75 g , 8.0 mmol , 2 eq ) in the correct vessel?" />
+    <Dissolve
+      vessel="filter"
+      solvent="benzene"
+      volume="40 mL" />
+    <Add
+      reagent="sodium hydride benzene solution"
+      vessel="filter"
+      volume="20 mL"
+      stir="True" />
+    <HeatChill
+      vessel="filter"
+      temp="80.1"
+      time="3 hrs"
+      stir="True" />
+    <HeatChillToTemp
+      vessel="filter"
+      temp="25.0"
+      active="False"
+      continue_heatchill="False"
+      stir="True" />
+    <Filter
+      filter_vessel="filter" />
+    <WashSolid
+      vessel="filter"
+      solvent="benzene"
+      volume="50 mL" />
+    <Dry
+      vessel="filter" />
+    <Transfer
+      from_vessel="filter"
+      to_vessel="rotavap"
+      volume="all" />
+    <Evaporate
+      rotavap_name="rotavap"
+      time="30 mins"
+      mode="auto" />
+    <Transfer
+      from_vessel="rotavap"
+      to_vessel="reactor"
+      volume="all" />
+    <Add
+      reagent="n-hexane"
+      vessel="reactor"
+      volume="4 mL" />
+    <Sonicate />
+    <Dry
+      vessel="reactor" />
+  </Procedure>
+
+</Synthesis>

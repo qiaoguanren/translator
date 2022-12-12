@@ -1,0 +1,86 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="filter"
+      type="filter" />
+    <Component
+      id="reactor"
+      type="reactor" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="4-phenylbutyric acid" />
+    <Reagent
+      id="benzylamine" />
+    <Reagent
+      id="boric acid" />
+    <Reagent
+      id="distilled water" />
+    <Reagent
+      id="hexanes" />
+    <Reagent
+      id="toluene" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="4-phenylbutyric acid"
+      vessel="reactor"
+      mass="4.92 g" />
+    <Add
+      reagent="boric acid"
+      vessel="reactor"
+      mass="20 mg" />
+    <Add
+      reagent="toluene"
+      vessel="reactor"
+      volume="88 mL" />
+    <Add
+      reagent="benzylamine"
+      vessel="reactor"
+      mass="3.32 g"
+      stir="True" />
+    <HeatChill
+      vessel="reactor"
+      temp="110.6"
+      time="16 hrs"
+      stir="True" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="25.0"
+      active="False"
+      continue_heatchill="False"
+      stir="True" />
+    <Add
+      reagent="hexanes"
+      vessel="filter"
+      volume="500 mL" />
+    <Transfer
+      from_vessel="reactor"
+      to_vessel="filter"
+      volume="all" />
+    <Stir
+      vessel="filter"
+      time="30 mins" />
+    <Filter
+      filter_vessel="filter" />
+    <WashSolid
+      vessel="filter"
+      solvent="hexanes"
+      volume="60 mL"
+      repeat="2" />
+    <WashSolid
+      vessel="filter"
+      solvent="distilled water"
+      volume="60 mL"
+      repeat="2" />
+    <Dry
+      vessel="filter"
+      time="12 hrs"
+      temp="25.0" />
+  </Procedure>
+
+</Synthesis>

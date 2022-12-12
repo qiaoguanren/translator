@@ -1,0 +1,54 @@
+<?xdl version="0.2.1" ?>
+
+<Synthesis
+  graph_sha256="140c86791137889b9613bbeaef1ab4655cd34e52b9ed8aaf76d925701949f8af"
+>
+  <Hardware>
+    <Component
+      id="cartridge_anhydrous potassium carbonate"
+      type="cartridge"
+      chemical="anhydrous potassium carbonate" />
+    <Component
+      id="reactor"
+      type="reactor" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+  </Hardware>
+
+  <Reagents>
+
+  </Reagents>
+
+  <Procedure>
+    <Transfer
+      from_vessel="reactor"
+      to_vessel="rotavap"
+      volume="26.41 mL"
+      from_port="0"
+      to_port="evaporate"
+      through="None"
+      time="None"
+      aspiration_speed="10"
+      move_speed="40"
+      dispense_speed="40"
+      viscous="False"
+      flush_tubing="False"
+    >
+      <CMove
+        from_vessel="reactor"
+        to_vessel="rotavap"
+        volume="26.41 mL"
+        move_speed="40"
+        aspiration_speed="10"
+        dispense_speed="40"
+        from_port="0"
+        to_port="evaporate"
+        unique="False"
+        through="None"
+        repeats="1"
+        use_backbone="True" />
+    </Transfer>
+  </Procedure>
+
+</Synthesis>

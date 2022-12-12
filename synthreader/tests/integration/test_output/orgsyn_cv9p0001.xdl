@@ -1,0 +1,136 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="column"
+      type="column" />
+    <Component
+      id="filter"
+      type="filter" />
+    <Component
+      id="reactor"
+      type="reactor" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="1 hexyne" />
+    <Reagent
+      id="4-dimethylaminopyridine" />
+    <Reagent
+      id="acetic anhydride" />
+    <Reagent
+      id="hexane" />
+    <Reagent
+      id="isopropyl alcohol" />
+    <Reagent
+      id="pentacarbonyl [ phenyl(methoxy)chromium ] carbene" />
+    <Reagent
+      id="silica gel" />
+    <Reagent
+      id="tetrahydrofuran" />
+    <Reagent
+      id="triethylamine" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="4-dimethylaminopyridine"
+      vessel="reactor"
+      mass="1.22 g" />
+    <Add
+      reagent="tetrahydrofuran"
+      vessel="reactor"
+      volume="500 mL" />
+    <Add
+      reagent="1 hexyne"
+      vessel="reactor"
+      volume="11 mL"
+      stir="True" />
+    <Add
+      reagent="acetic anhydride"
+      vessel="reactor"
+      volume="13.2 mL"
+      stir="True" />
+    <Add
+      reagent="triethylamine"
+      vessel="reactor"
+      volume="9.8 mL"
+      stir="True" />
+    <Add
+      reagent="pentacarbonyl [ phenyl(methoxy)chromium ] carbene"
+      vessel="reactor"
+      mass="20 g"
+      stir="True" />
+    <Add
+      reagent="tetrahydrofuran"
+      vessel="reactor"
+      volume="100 mL"
+      stir="True" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="65.0"
+      stir="True" />
+    <Wait
+      time="52.5 mins" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="25.0"
+      stir="True" />
+    <Transfer
+      from_vessel="reactor"
+      to_vessel="rotavap"
+      volume="all" />
+    <Add
+      reagent="silica gel"
+      vessel="rotavap"
+      mass="30 g"
+      stir="True" />
+    <Evaporate
+      rotavap_name="rotavap"
+      temp="50.0"
+      pressure="249.0"
+      time="30 mins"
+      mode="auto" />
+    <WashSolid
+      vessel="rotavap"
+      solvent="hexane"
+      volume="100 mL"
+      repeat="5" />
+    <Evaporate
+      rotavap_name="rotavap"
+      time="30 mins"
+      mode="auto" />
+    <Transfer
+      from_vessel="rotavap"
+      to_vessel="filter"
+      volume="all" />
+    <Add
+      reagent="isopropyl alcohol"
+      vessel="filter"
+      volume="20 mL" />
+    <Filter
+      filter_vessel="filter" />
+    <Transfer
+      from_vessel="filter"
+      to_vessel="rotavap"
+      volume="all" />
+    <Evaporate
+      rotavap_name="rotavap"
+      time="30 mins"
+      mode="auto" />
+    <RunColumn
+      from_vessel="rotavap"
+      to_vessel="rotavap"
+      column="column" />
+    <Evaporate
+      rotavap_name="rotavap"
+      time="30 mins"
+      mode="auto" />
+  </Procedure>
+
+</Synthesis>
