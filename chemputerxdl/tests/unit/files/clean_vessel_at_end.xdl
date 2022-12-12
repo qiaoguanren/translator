@@ -1,0 +1,50 @@
+<Synthesis>
+  <Hardware>
+    <Component
+      id="rotavap"
+      type="rotavap"
+    />
+    <Component
+      id="reactor"
+      type="reactor"
+    />
+    <Component
+      id="separator"
+      type="separator"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="ether" />
+    <Reagent
+      id="chloroacetyl chloride" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      vessel="reactor"
+      volume="10 mL"
+      reagent="chloroacetyl chloride"
+    />
+    <Dissolve
+      vessel="reactor"
+      volume="10 mL"
+      solvent="ether"
+    />
+    <Separate
+      from_vessel="reactor"
+      to_vessel="rotavap"
+      separation_vessel="separator"
+      product_bottom="True"
+      solvent="ether"
+      solvent_volume="50 mL"
+      purpose="extract"
+    />
+    <Evaporate
+      rotavap_name="rotavap"
+      mode="auto"
+    />
+  </Procedure>
+
+</Synthesis>

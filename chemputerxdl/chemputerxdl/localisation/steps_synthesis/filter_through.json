@@ -1,0 +1,23 @@
+{
+  "FilterThrough": {
+    "en": {
+      "eluting": {
+        "eluting_solvent": {
+          "any": "eluting with {eluting_solvent} ({eluting_repeats} x {eluting_volume})",
+          "else": "with no elution"
+        }
+      },
+      "full": "Filter contents of {from_vessel} through {through} to {to_vessel} {eluting}"
+    }
+  },
+  "FilterThrough (not eluting)": {
+    "en": "Filter contents of {from_vessel} through {through_cartridge} into {to_vessel}.",
+    "zh": "\u8fc7\u6ee4{from_vessel}\u4e2d\u7684\u7ec4\u5206\uff0c\u7ecf{through_cartridge}\u8fdb\u5165{to_vessel}.",
+    "ru": "\u041e\u0442\u0444\u0438\u043b\u044c\u0442\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u0435 {from_vessel} \u0432 {to_vessel} \u0447\u0435\u0440\u0435\u0437 {through_cartridge}."
+  },
+  "FilterThrough (eluting)": {
+    "en": "Filter contents of {from_vessel} through {through_cartridge} into {to_vessel}, eluting with {eluting_repeats} x {eluting_volume} of {eluting_solvent}.",
+    "zh": "\u8fc7\u6ee4{from_vessel}\u4e2d\u7684\u6ee4\u6db2\u7ecf{through_cartridge}\u8fdb\u5165{to_vessel}, \u7528{eluting_solvent}{eluting_repeats}x{eluting_volume} \u8fdb\u884c\u6d17\u8131.",
+    "ru": "\u041e\u0442\u0444\u0438\u043b\u044c\u0442\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u0435 {from_vessel} \u0432 {to_vessel} \u0447\u0435\u0440\u0435\u0437 {through_cartridge}, \u043f\u0440\u043e\u043c\u044b\u0432 {eluting_solvent} ({eluting_repeats} \u0440\u0430\u0437\u0430 \u043f\u043e {eluting_volume})."
+  }
+}

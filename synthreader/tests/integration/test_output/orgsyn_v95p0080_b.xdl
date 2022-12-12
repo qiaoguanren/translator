@@ -1,0 +1,120 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="column"
+      type="column" />
+    <Component
+      id="reactor"
+      type="reactor" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+    <Component
+      id="separator"
+      type="separator" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="(S)-DTBM-SEGPHOS" />
+    <Reagent
+      id="N,N-dibenzyl-O-pivaloylhydroxylamine" />
+    <Reagent
+      id="THF" />
+    <Reagent
+      id="copper(II)acetate" />
+    <Reagent
+      id="dimethoxy(methyl)silane" />
+    <Reagent
+      id="ethyl acetate" />
+    <Reagent
+      id="saturated aqueous sodium bicarbonate" />
+    <Reagent
+      id="trans-β-methylstyrene" />
+    <Reagent
+      id="triphenylphosphine" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="N,N-dibenzyl-O-pivaloylhydroxylamine"
+      vessel="reactor"
+      mass="7.55 g" />
+    <Add
+      reagent="copper(II)acetate"
+      vessel="reactor"
+      mass="38 mg" />
+    <Add
+      reagent="(S)-DTBM-SEGPHOS"
+      vessel="reactor"
+      mass="0.274 g" />
+    <Add
+      reagent="triphenylphosphine"
+      vessel="reactor"
+      mass="61 mg" />
+    <Add
+      reagent="trans-β-methylstyrene"
+      vessel="reactor"
+      volume="2.75 mL" />
+    <Add
+      reagent="THF"
+      vessel="reactor"
+      volume="21 mL"
+      dispense_speed="10.0"
+      stir="True" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="23.0"
+      stir="True" />
+    <Add
+      reagent="dimethoxy(methyl)silane"
+      vessel="reactor"
+      volume="5.22 mL"
+      time="10 mins"
+      stir="True" />
+    <Stir
+      vessel="reactor"
+      time="12 hrs" />
+    <Add
+      reagent="saturated aqueous sodium bicarbonate"
+      vessel="reactor"
+      volume="50 mL"
+      dispense_speed="10.0"
+      stir="True" />
+    <Add
+      reagent="ethyl acetate"
+      vessel="reactor"
+      volume="50 mL"
+      stir="True" />
+    <Separate
+      purpose="extract"
+      from_vessel="reactor"
+      separation_vessel="separator"
+      to_vessel="rotavap"
+      product_bottom="False"
+      solvent=""
+      waste_phase_to_vessel="separator" />
+    <Separate
+      purpose="extract"
+      from_vessel="separator"
+      separation_vessel="separator"
+      to_vessel="rotavap"
+      product_bottom="False"
+      solvent="ethyl acetate"
+      solvent_volume="50 mL"
+      n_separations="2" />
+    <Evaporate
+      rotavap_name="rotavap"
+      temp="35.0"
+      pressure="66.661"
+      time="30 mins"
+      mode="auto" />
+    <RunColumn
+      from_vessel="rotavap"
+      to_vessel="reactor"
+      column="column" />
+  </Procedure>
+
+</Synthesis>

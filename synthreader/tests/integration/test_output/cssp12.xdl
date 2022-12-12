@@ -1,0 +1,95 @@
+<?xdl version="0.4.4" ?>
+
+<Synthesis>
+  <Hardware>
+    <Component
+      id="column"
+      type="column" />
+    <Component
+      id="reactor"
+      type="reactor" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+    <Component
+      id="separator"
+      type="separator" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="Bu3SnCl" />
+    <Reagent
+      id="ether" />
+    <Reagent
+      id="t-BuLi" />
+    <Reagent
+      id="the indole THF solution" />
+    <Reagent
+      id="water" />
+  </Reagents>
+
+  <Procedure>
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="-78.0"
+      stir="True" />
+    <Add
+      reagent="the indole THF solution"
+      vessel="reactor"
+      volume="0" />
+    <Add
+      reagent="t-BuLi"
+      vessel="reactor"
+      volume="0"
+      dispense_speed="3.0" />
+    <Wait
+      time="5 mins" />
+    <Add
+      reagent="Bu3SnCl"
+      vessel="reactor"
+      volume="0" />
+    <Stir
+      vessel="reactor"
+      time="20 mins" />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="25.0"
+      stir="True" />
+    <Transfer
+      from_vessel="reactor"
+      to_vessel="rotavap"
+      volume="all" />
+    <Evaporate
+      rotavap_name="rotavap"
+      temp="50.0"
+      pressure="249.0"
+      time="30 mins"
+      mode="auto" />
+    <Add
+      reagent="water"
+      vessel="rotavap"
+      volume="0" />
+    <Separate
+      purpose="extract"
+      from_vessel="rotavap"
+      separation_vessel="separator"
+      to_vessel="rotavap"
+      product_bottom="False"
+      solvent="ether"
+      solvent_volume="25 mL" />
+    <Dry
+      vessel="rotavap" />
+    <Evaporate
+      rotavap_name="rotavap"
+      temp="50.0"
+      pressure="376.3333333333333"
+      time="30 mins"
+      mode="auto" />
+    <RunColumn
+      from_vessel="rotavap"
+      to_vessel="reactor"
+      column="column" />
+  </Procedure>
+
+</Synthesis>

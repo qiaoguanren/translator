@@ -1,0 +1,70 @@
+{
+  "Separate": {
+    "en": {
+      "purpose": {
+        "purpose": {
+          "wash": "Wash",
+          "extract": "Extract"
+        }
+      },
+      "mixture": {
+        "solvent": {
+          "any": "contents of {from_vessel}",
+          "else": "two-phase mixture in {from_vessel}"
+        }
+      },
+      "solvent": {
+        "solvent": {
+          "any": "with {solvent}",
+          "else": "without adding solvent"
+        }
+      },
+      "volume": {
+        "solvent": {
+          "any": "({n_separations} x {solvent_volume})",
+          "else": ""
+        }
+      },
+      "waste_phase": {
+        "product_bottom": {
+          "true": "waste phase (top)",
+          "false": "waste phase (bottom)"
+        }
+      },
+      "waste_phase_dest": {
+        "waste_phase_to_vessel": {
+          "any": "to vessel",
+          "else": "to waste"
+        }
+      },
+      "product_phase": {
+        "product_bottom": {
+          "true": "product phase (bottom)",
+          "false": "product phase (top)"
+        }
+      },
+      "through_prefix": {
+        "through": {
+          "any": "through",
+          "else": "directly"
+        }
+      },
+      "full": "{purpose} {mixture} {solvent} {volume}. Transfer {waste_phase} {waste_phase_dest} {waste_phase_to_vessel}, and {product_phase} {through_prefix} {through} to {to_vessel}"
+    }
+  },
+  "Separate (wash)": {
+    "en": "Wash contents of {from_vessel} with {solvent} ({n_separations} x {solvent_volume}). Transfer waste phase ({waste_phase}) to {waste_phase_to_vessel} and product phase ({product_phase}) to {to_vessel}.",
+    "zh": "\u7528{solvent} ({n_separations} x {solvent_volume})\u6d17\u6da4{from_vessel}\u4e2d\u7ec4\u5206. \u8f6c\u79fb\u5e9f\u6db2\u76f8 ({waste_phase}) \u81f3{waste_phase_to_vessel} \uff0c \u8f6c\u79fb\u4ea7\u54c1\u76f8({product_phase}) \u81f3{to_vessel}.",
+    "ru": "\u041f\u0440\u043e\u043c\u044b\u0442\u044c \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u0435 {from_vessel} \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e {solvent} ({n_separations} \u0440\u0430\u0437(\u0430) \u043f\u043e {solvent_volume}). \u041e\u0442\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u0443\u044e \u0444\u0430\u0437\u0443 ({waste_phase}) \u0441\u043b\u0438\u0442\u044c \u0432 {waste_phase_to_vessel}, \u0444\u0430\u0437\u0443 \u0441 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c ({product_phase}) - \u0432 {to_vessel}."
+  },
+  "Separate (extract)": {
+    "en": "Extract contents of {from_vessel} with {solvent} ({n_separations} x {solvent_volume}). Transfer waste phase ({waste_phase}) to {waste_phase_to_vessel} and product phase ({product_phase}) to {to_vessel}.",
+    "zh": "\u7528{solvent} ({n_separations} x {solvent_volume})\u8403\u53d6 {from_vessel}\u4e2d\u7684\u7ec4\u5206. \u8f6c\u79fb\u5e9f\u6db2\u76f8 ({waste_phase}) \u81f3\u5e9f\u6db2\u74f6{waste_phase_to_vessel} \uff0c \u8f6c\u79fb\u4ea7\u54c1\u76f8({product_phase}) \u81f3\u5bb9\u5668{to_vessel}.",
+    "ru": "\u042d\u043a\u0441\u0442\u0440\u0430\u0433\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u0435 {from_vessel} \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e {solvent} ({n_separations} \u0440\u0430\u0437(\u0430) \u043f\u043e {solvent_volume}). \u041e\u0442\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u0443\u044e \u0444\u0430\u0437\u0443 ({waste_phase}) \u0441\u043b\u0438\u0442\u044c \u0432 {waste_phase_to_vessel}, \u0444\u0430\u0437\u0443 \u0441 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c ({product_phase}) - \u0432 {to_vessel}."
+  },
+  "Separate (solvent_free)": {
+    "en": "Separate two-phase mixture in {separator}, transfer {waste_phase} (top) to {separator} and {product_phase} (bottom) to {buffer_flask}.",
+    "zh": "",
+    "ru": ""
+  }
+}

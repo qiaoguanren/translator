@@ -1,0 +1,42 @@
+# Project dirs
+data/
+stuff/
+build/
+documentation/_build
+documentation/public
+documentation/chemputerxdl_autodoc
+public/
+
+# Python
+.ipynb_checkpoints
+*.pyc
+*.pyo
+__pycache__/
+build
+*.egg-info
+
+logs
+log_files/
+tests/chempiler_output/
+tests/unit/chempiler_output
+test_output/
+scripts/log_files/*
+scripts/crash_dump/*
+crash_dump/
+
+# other
+.vscode
+chempiler_output/
+*.xdlexe
+*-process.xdl
+xdl_chemputer_schema.xsd
+.pytest_cache
+.coverage
+log_files/
+
+# Allows
+!tests/chemputer/unit/files/xdlexe_test_iso8891.xdlexe
+!tests/chemputer/unit/files/xdlexe_test_missing_properties.xdlexe
+!tests/chemputer/unit/files/xdlexe_test_dynamic_steps.xdlexe
+!tests/chemputer/unit/files/repeat_parent.xdlexe
+!*.flake8*

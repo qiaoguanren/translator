@@ -1,0 +1,20 @@
+<Synthesis>
+  <Hardware>
+    <Component
+      id="filter"
+      type="filter"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="water" />
+  </Reagents>
+
+  <Procedure>
+    <Evacuate
+      vessel="filter"
+    />
+  </Procedure>
+
+</Synthesis>
