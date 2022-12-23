@@ -1,0 +1,186 @@
+{
+  "metadata": {},
+  "steps": [
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "rotavap",
+        "reagent": "ether",
+        "volume": null,
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": "1200 mg",
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "96e434df-c190-4b5e-9f0d-1071a2bd42af",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "rotavap",
+        "reagent": "ether",
+        "volume": null,
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": "2 mol",
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "1884349a-e28d-4e01-adf6-d603e7ad9260",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "rotavap",
+        "reagent": "ether",
+        "volume": null,
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": "68 g",
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "6c37f21b-3f1c-4ad0-950a-d092bf656504",
+      "section": "no_section"
+    },
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "rotavap",
+        "reagent": "NaCl",
+        "mass": null,
+        "amount": "2 mol",
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "False",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "5a0b45d9-c45d-4ff8-a881-cec93fa1c4ab",
+      "section": "no_section"
+    }
+  ],
+  "reagents": [
+    {
+      "name": "ether",
+      "properties": {
+        "name": "ether",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": 46.07,
+        "density": 2.6,
+        "concentration": 56.435,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "NaCl",
+      "properties": {
+        "name": "NaCl",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": 58.443,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    }
+  ],
+  "hardware": [
+    {
+      "name": "rotavap",
+      "properties": {
+        "id": "rotavap",
+        "component_type": "rotavap",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "reactor",
+      "properties": {
+        "id": "reactor",
+        "component_type": "reactor",
+        "chemical": null,
+        "comment": ""
+      }
+    }
+  ]
+}

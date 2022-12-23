@@ -1,0 +1,45 @@
+<XDL>
+<Blueprint id='GrignardExchange'>
+    <Hardware>
+        <Component id='reactor' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent name='3,5-bis(trifluoromethyl)bromobenzene' molecular_weight='293 g/mol' density='1.699 g/ml' role='reagent'/>
+    </Reagents>
+
+    <Procedure>
+        <Add
+          vessel='reactor'
+          reagent='3,5-bis(trifluoromethyl)bromobenzene'
+          amount='1.0 eq.' />
+
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+      <Component id='reactor1' type='reactor'/>
+      <Component id='reactor2' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent name='acetone'  role='solvent'/>
+      </Reagents>
+
+    <Parameters>
+    </Parameters>
+
+    <Procedure>
+
+      <GrignardExchange reactor='reactor1'/>
+      <Add
+        vessel='reactor1'
+        reagent='acetone'
+        volume='10 mL'
+      />
+
+    </Procedure>
+
+</Synthesis>
+</XDL>

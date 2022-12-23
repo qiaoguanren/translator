@@ -1,0 +1,30 @@
+<Synthesis>
+    <Metadata
+        product="lidocaine"
+        description="Synthesis of lidocaine"
+    />
+
+    <Hardware>
+      <Component
+        id="filter"
+        type="filter"
+      />
+
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        name="glacial acetic acid"
+      />
+    </Reagents>
+
+    <Procedure>
+      <Add
+        vessel="filter"
+        reagent="glacial acetic acid"
+        volume="15 mL"
+        port="top"
+      />
+    </Procedure>
+
+  </Synthesis>

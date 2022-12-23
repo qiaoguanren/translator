@@ -1,0 +1,60 @@
+<XDL>
+
+  <Blueprint id="Add_BP">
+    <Hardware>
+      <Component id='reactor_BP' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        id="reagent_BP"
+        role="substrate"
+        solid="False"/>
+    </Reagents>
+
+    <Procedure>
+        <Add reagent='reagent_BP' vessel='reactor_BP' amount='1 mL'/>
+        <Wait time="2 secs" />
+    </Procedure>
+  </Blueprint>
+
+  <Synthesis>
+
+    <Hardware>
+        <Component id='reactor' type='reactor'/>
+        <Component id='UVVis' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        name="reagent_12"
+        role="substrate" />
+      <Reagent
+        name="reagent_13"
+        role="substrate"
+        solid="True"/>
+      <Reagent
+        name="reagent_14"
+        role="substrate" />
+      <Reagent
+        name="reagent_15"
+        role="substrate" />
+      <Reagent
+        name="solvent"
+        role="solvent" />
+    </Reagents>
+
+    <Procedure>
+      <Transfer
+          from_vessel="reactor"
+          to_vessel="UVVis"
+          amount="0.8 mL"
+      />
+      <Repeat rx.role='substrate' rx.solid='False' rc.type='reactor'>
+        <Add_BP reagent_BP="rx" reactor_BP="rc"/>
+      </Repeat>
+      <Wait time="5 secs" />
+    </Procedure>
+
+  </Synthesis>
+</XDL>

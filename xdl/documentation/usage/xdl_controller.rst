@@ -1,6 +1,6 @@
-==============
+====================
 Using XDL Controller
-==============
+====================
 
 As well as providing a way to capture procedures in static files, all functionality
 of XDL is also available within scripts using the XDL Controller. This is useful
@@ -28,7 +28,7 @@ Instantiate XDL Controller
 
 
 Use XDL Controller
-********************
+******************
 
 All XDL steps are available as methods of the controller, but with snake case
 instead of pascal case, for example :code:`CleanVessel` -> :code:`clean_vessel`.
@@ -40,15 +40,15 @@ The method calls below will physically operate the platform.
     xdl_controller.add(
         reagent="water",
         vessel="reactor",
-        volume="10 mL"
+        volume="10 mL",
     )
     xdl_controller.add(
         reagent="1M NaOH solution",
         vessel="reactor",
-        volume="10 mL"
+        volume="10 mL",
     )
     xdl_controller.heat_chill(
         vessel="reactor",
         temp="50°C",
-        time="3 hrs"
+        time="3 hrs",
     )

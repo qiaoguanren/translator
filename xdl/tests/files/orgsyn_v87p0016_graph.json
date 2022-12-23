@@ -1,0 +1,838 @@
+{
+  "nodes": [
+    {
+      "id": "flask_2-thiophenecarboxaldehyde",
+      "type": "flask",
+      "x": 240,
+      "y": 280,
+      "internalId": 1,
+      "label": "flask_2-thiophenecarboxaldehyde",
+      "class": "ChemputerFlask",
+      "name": "flask_2-thiophenecarboxaldehyde",
+      "chemical": "2-thiophenecarboxaldehyde",
+      "current_volume": 50,
+      "max_volume": 100,
+      "can_filter": false
+    },
+    {
+      "id": "flask_methanol",
+      "type": "flask",
+      "x": 400,
+      "y": 280,
+      "internalId": 2,
+      "label": "flask_methanol",
+      "class": "ChemputerFlask",
+      "name": "flask_methanol",
+      "chemical": "methanol",
+      "current_volume": 500,
+      "max_volume": 500,
+      "can_filter": false
+    },
+    {
+      "id": "flask_water",
+      "type": "flask",
+      "x": 720,
+      "y": 280,
+      "internalId": 3,
+      "label": "flask_water",
+      "class": "ChemputerFlask",
+      "name": "flask_water",
+      "chemical": "water",
+      "current_volume": 1000,
+      "max_volume": 1000,
+      "can_filter": false
+    },
+    {
+      "id": "flask_MTBE",
+      "type": "flask",
+      "x": 1280,
+      "y": 360,
+      "internalId": 4,
+      "label": "flask_MTBE",
+      "class": "ChemputerFlask",
+      "name": "flask_MTBE",
+      "chemical": "MTBE",
+      "current_volume": 500,
+      "max_volume": 500,
+      "can_filter": false
+    },
+    {
+      "id": "flask_brine",
+      "type": "flask",
+      "x": 1600,
+      "y": 360,
+      "internalId": 5,
+      "label": "flask_brine",
+      "class": "ChemputerFlask",
+      "name": "flask_brine",
+      "chemical": "saturated NaCl solution",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false
+    },
+    {
+      "id": "cartridge_anhydrous MgSO4",
+      "type": "cartridge",
+      "x": 1120,
+      "y": 320,
+      "internalId": 6,
+      "label": "cartridge_anhydrous MgSO4",
+      "class": "ChemputerCartridge",
+      "name": "cartridge_anhydrous MgSO4",
+      "chemical": "anhydrous MgSO4"
+    },
+    {
+      "id": "rotavap",
+      "type": "rotavap",
+      "x": 1440,
+      "y": 360,
+      "internalId": 7,
+      "label": "rotavap",
+      "customProperties": {
+        "mode": {
+          "name": "mode",
+          "id": "mode",
+          "units": "",
+          "type": "str"
+        }
+      },
+      "class": "RV10Rotovap",
+      "name": "rotavap",
+      "address": "192.168.1.202",
+      "current_volume": 0,
+      "max_volume": 250,
+      "connection_mode": "tcpip",
+      "port": "",
+      "can_filter": false
+    },
+    {
+      "id": "reactor",
+      "type": "reactor",
+      "x": 320,
+      "y": 360,
+      "internalId": 8,
+      "label": "reactor",
+      "class": "ChemputerReactor",
+      "name": "reactor",
+      "current_volume": 0,
+      "max_volume": 500,
+      "necks": 2,
+      "can_filter": false
+    },
+    {
+      "id": "separator",
+      "type": "separator",
+      "x": 640,
+      "y": 360,
+      "internalId": 10,
+      "label": "separator",
+      "class": "ChemputerSeparator",
+      "name": "separator",
+      "current_volume": 0,
+      "max_volume": 250,
+      "necks": 1,
+      "can_filter": false,
+      "dead_volume": 2.5
+    },
+    {
+      "id": "valve_H",
+      "type": "valve",
+      "x": 320,
+      "y": 200,
+      "internalId": 11,
+      "label": "valve_H",
+      "class": "ChemputerValve",
+      "name": "valve_H",
+      "address": "192.168.1.122",
+      "current_volume": 0
+    },
+    {
+      "id": "valve_G",
+      "type": "valve",
+      "x": 640,
+      "y": 200,
+      "internalId": 16,
+      "label": "valve_G",
+      "class": "ChemputerValve",
+      "name": "valve_G",
+      "address": "192.168.1.123",
+      "current_volume": 0
+    },
+    {
+      "id": "valve_Y",
+      "type": "valve",
+      "x": 960,
+      "y": 200,
+      "internalId": 20,
+      "label": "valve_Y",
+      "class": "ChemputerValve",
+      "name": "valve_Y",
+      "address": "192.168.1.121",
+      "current_volume": 0
+    },
+    {
+      "id": "sensor_stirrer",
+      "type": "conductivity_sensor",
+      "x": 640,
+      "y": 480,
+      "internalId": 21,
+      "label": "sensor_stirrer",
+      "connection_mode": "tcpip",
+      "class": "ConductivitySensor",
+      "name": "sensor_stirrer",
+      "port": "COM6",
+      "address": ""
+    },
+    {
+      "id": "valve_K",
+      "type": "valve",
+      "x": 1280,
+      "y": 200,
+      "internalId": 23,
+      "label": "valve_K",
+      "class": "ChemputerValve",
+      "name": "valve_K",
+      "address": "192.168.1.125",
+      "current_volume": 0
+    },
+    {
+      "id": "pump_H",
+      "type": "pump",
+      "x": 320,
+      "y": 80,
+      "internalId": 41,
+      "label": "pump_H",
+      "class": "ChemputerPump",
+      "name": "pump_H",
+      "address": "192.168.1.102",
+      "max_volume": 25,
+      "current_volume": 0
+    },
+    {
+      "id": "pump_G",
+      "type": "pump",
+      "x": 640,
+      "y": 80,
+      "internalId": 42,
+      "label": "pump_G",
+      "class": "ChemputerPump",
+      "name": "pump_G",
+      "address": "192.168.1.103",
+      "max_volume": 25,
+      "current_volume": 0
+    },
+    {
+      "id": "pump_Y",
+      "type": "pump",
+      "x": 960,
+      "y": 80,
+      "internalId": 43,
+      "label": "pump_Y",
+      "class": "ChemputerPump",
+      "name": "pump_Y",
+      "address": "192.168.1.104",
+      "max_volume": 25,
+      "current_volume": 0
+    },
+    {
+      "id": "pump_K",
+      "type": "pump",
+      "x": 1280,
+      "y": 80,
+      "internalId": 44,
+      "label": "pump_K",
+      "class": "ChemputerPump",
+      "name": "pump_K",
+      "address": "192.168.1.105",
+      "max_volume": 50,
+      "current_volume": 0
+    },
+    {
+      "id": "waste_K",
+      "type": "waste",
+      "x": 1360,
+      "y": 120,
+      "internalId": 45,
+      "label": "waste_K",
+      "class": "ChemputerWaste",
+      "name": "waste_K",
+      "current_volume": 0,
+      "max_volume": 100,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "waste_Y",
+      "type": "waste",
+      "x": 1040,
+      "y": 120,
+      "internalId": 46,
+      "label": "waste_Y",
+      "class": "ChemputerWaste",
+      "name": "waste_Y",
+      "current_volume": 0,
+      "max_volume": 100,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "waste_H",
+      "type": "waste",
+      "x": 400,
+      "y": 120,
+      "internalId": 47,
+      "label": "waste_H",
+      "class": "ChemputerWaste",
+      "name": "waste_H",
+      "current_volume": 0,
+      "max_volume": 2000,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "waste_G",
+      "type": "waste",
+      "x": 720,
+      "y": 120,
+      "internalId": 48,
+      "label": "waste_G",
+      "class": "ChemputerWaste",
+      "name": "waste_G",
+      "current_volume": 0,
+      "max_volume": 2000,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "phase_A",
+      "type": "flask",
+      "x": 880,
+      "y": 280,
+      "internalId": 9,
+      "label": "phase_A",
+      "class": "ChemputerFlask",
+      "name": "phase_A",
+      "chemical": "",
+      "current_volume": 0,
+      "max_volume": 200,
+      "can_filter": false
+    },
+    {
+      "id": "phase_B",
+      "type": "flask",
+      "x": 960,
+      "y": 360,
+      "internalId": 0,
+      "label": "phase_B",
+      "class": "ChemputerFlask",
+      "name": "phase_B",
+      "chemical": "",
+      "current_volume": 0,
+      "max_volume": 200,
+      "can_filter": false
+    },
+    {
+      "id": "stirrer_reactor",
+      "type": "heater",
+      "x": 320,
+      "y": 440,
+      "customProperties": {
+        "mode": {
+          "name": "mode",
+          "id": "mode",
+          "units": "",
+          "type": "str"
+        }
+      },
+      "internalId": 34,
+      "label": "stirrer_reactor",
+      "class": "RCTDigitalHotplate",
+      "name": "stirrer_reactor",
+      "address": "192.168.1.203",
+      "connection_mode": "tcpip",
+      "port": "",
+      "temp_sensor": "external"
+    },
+    {
+      "id": "stirrer_separator",
+      "type": "stirrer",
+      "x": 560,
+      "y": 360,
+      "customProperties": {
+        "mode": {
+          "name": "mode",
+          "id": "mode",
+          "units": "",
+          "type": "str"
+        }
+      },
+      "internalId": 63,
+      "label": "stirrer_separator",
+      "class": "HeiTorque100PrecisionStirrer",
+      "name": "stirrer_separator",
+      "address": "192.168.1.206",
+      "connection_mode": "tcpip",
+      "port": ""
+    },
+    {
+      "id": "vacuum_pump_rotavap",
+      "type": "vacuum",
+      "x": 1440,
+      "y": 440,
+      "customProperties": {
+        "mode": {
+          "name": "mode",
+          "id": "mode",
+          "units": "",
+          "type": "str"
+        }
+      },
+      "internalId": 65,
+      "label": "vacuum_pump_rotavap",
+      "class": "CVC3000VacuumPump",
+      "name": "vacuum_pump_rotavap",
+      "address": "192.168.1.201",
+      "connection_mode": "tcpip",
+      "port": ""
+    },
+    {
+      "id": "valve_I",
+      "type": "valve",
+      "x": 1600,
+      "y": 200,
+      "internalId": 67,
+      "label": "valve_I",
+      "class": "ChemputerValve",
+      "name": "valve_I",
+      "address": "192.168.1.126",
+      "current_volume": 0
+    },
+    {
+      "id": "pump_I",
+      "type": "pump",
+      "x": 1600,
+      "y": 80,
+      "internalId": 14,
+      "label": "pump_I",
+      "class": "ChemputerPump",
+      "name": "pump_I",
+      "address": "192.168.1.106",
+      "max_volume": 25,
+      "current_volume": 0
+    },
+    {
+      "id": "waste_I",
+      "type": "waste",
+      "x": 1680,
+      "y": 120,
+      "internalId": 15,
+      "label": "waste_I",
+      "class": "ChemputerWaste",
+      "name": "waste_I",
+      "current_volume": 0,
+      "max_volume": 2000,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "flask_nitrogen",
+      "type": "flask",
+      "x": 1680,
+      "y": 280,
+      "internalId": 26,
+      "label": "flask_nitrogen",
+      "class": "ChemputerFlask",
+      "name": "flask_nitrogen",
+      "chemical": "nitrogen",
+      "current_volume": 2000,
+      "max_volume": 2000,
+      "can_filter": false
+    }
+  ],
+  "links": [
+    {
+      "id": 12,
+      "sourceInternal": 11,
+      "targetInternal": 8,
+      "source": "valve_H",
+      "target": "reactor",
+      "port": "(4,0)"
+    },
+    {
+      "id": 13,
+      "sourceInternal": 8,
+      "targetInternal": 11,
+      "source": "reactor",
+      "target": "valve_H",
+      "port": "(0,4)"
+    },
+    {
+      "id": 24,
+      "sourceInternal": 10,
+      "targetInternal": 21,
+      "source": "separator",
+      "target": "sensor_stirrer",
+      "port": "(,)"
+    },
+    {
+      "id": 38,
+      "sourceInternal": 16,
+      "targetInternal": 20,
+      "source": "valve_G",
+      "target": "valve_Y",
+      "port": "(1,2)"
+    },
+    {
+      "id": 39,
+      "sourceInternal": 20,
+      "targetInternal": 23,
+      "source": "valve_Y",
+      "target": "valve_K",
+      "port": "(1,2)"
+    },
+    {
+      "id": 40,
+      "sourceInternal": 23,
+      "targetInternal": 20,
+      "source": "valve_K",
+      "target": "valve_Y",
+      "port": "(2,1)"
+    },
+    {
+      "id": 49,
+      "sourceInternal": 41,
+      "targetInternal": 11,
+      "source": "pump_H",
+      "target": "valve_H",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 50,
+      "sourceInternal": 11,
+      "targetInternal": 41,
+      "source": "valve_H",
+      "target": "pump_H",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 51,
+      "sourceInternal": 11,
+      "targetInternal": 47,
+      "source": "valve_H",
+      "target": "waste_H",
+      "port": "(0,0)"
+    },
+    {
+      "id": 52,
+      "sourceInternal": 42,
+      "targetInternal": 16,
+      "source": "pump_G",
+      "target": "valve_G",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 53,
+      "sourceInternal": 16,
+      "targetInternal": 42,
+      "source": "valve_G",
+      "target": "pump_G",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 54,
+      "sourceInternal": 16,
+      "targetInternal": 48,
+      "source": "valve_G",
+      "target": "waste_G",
+      "port": "(0,0)"
+    },
+    {
+      "id": 55,
+      "sourceInternal": 16,
+      "targetInternal": 11,
+      "source": "valve_G",
+      "target": "valve_H",
+      "port": "(2,1)"
+    },
+    {
+      "id": 56,
+      "sourceInternal": 43,
+      "targetInternal": 20,
+      "source": "pump_Y",
+      "target": "valve_Y",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 57,
+      "sourceInternal": 20,
+      "targetInternal": 43,
+      "source": "valve_Y",
+      "target": "pump_Y",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 58,
+      "sourceInternal": 20,
+      "targetInternal": 46,
+      "source": "valve_Y",
+      "target": "waste_Y",
+      "port": "(0,0)"
+    },
+    {
+      "id": 59,
+      "sourceInternal": 20,
+      "targetInternal": 16,
+      "source": "valve_Y",
+      "target": "valve_G",
+      "port": "(2,1)"
+    },
+    {
+      "id": 60,
+      "sourceInternal": 44,
+      "targetInternal": 23,
+      "source": "pump_K",
+      "target": "valve_K",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 61,
+      "sourceInternal": 23,
+      "targetInternal": 44,
+      "source": "valve_K",
+      "target": "pump_K",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 62,
+      "sourceInternal": 23,
+      "targetInternal": 45,
+      "source": "valve_K",
+      "target": "waste_K",
+      "port": "(0,0)"
+    },
+    {
+      "id": 28,
+      "sourceInternal": 11,
+      "targetInternal": 16,
+      "source": "valve_H",
+      "target": "valve_G",
+      "port": "(1,2)"
+    },
+    {
+      "id": 37,
+      "sourceInternal": 34,
+      "targetInternal": 8,
+      "source": "stirrer_reactor",
+      "target": "reactor",
+      "port": "(,)"
+    },
+    {
+      "id": 64,
+      "sourceInternal": 63,
+      "targetInternal": 10,
+      "source": "stirrer_separator",
+      "target": "separator",
+      "port": "(,)"
+    },
+    {
+      "id": 66,
+      "sourceInternal": 65,
+      "targetInternal": 7,
+      "source": "vacuum_pump_rotavap",
+      "target": "rotavap",
+      "port": "(,)"
+    },
+    {
+      "id": 17,
+      "sourceInternal": 14,
+      "targetInternal": 67,
+      "source": "pump_I",
+      "target": "valve_I",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 18,
+      "sourceInternal": 67,
+      "targetInternal": 14,
+      "source": "valve_I",
+      "target": "pump_I",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 19,
+      "sourceInternal": 67,
+      "targetInternal": 15,
+      "source": "valve_I",
+      "target": "waste_I",
+      "port": "(0,0)"
+    },
+    {
+      "id": 22,
+      "sourceInternal": 23,
+      "targetInternal": 67,
+      "source": "valve_K",
+      "target": "valve_I",
+      "port": "(1,2)"
+    },
+    {
+      "id": 25,
+      "sourceInternal": 67,
+      "targetInternal": 23,
+      "source": "valve_I",
+      "target": "valve_K",
+      "port": "(2,1)"
+    },
+    {
+      "id": 27,
+      "sourceInternal": 1,
+      "targetInternal": 11,
+      "source": "flask_2-thiophenecarboxaldehyde",
+      "target": "valve_H",
+      "port": "(0,3)"
+    },
+    {
+      "id": 29,
+      "sourceInternal": 2,
+      "targetInternal": 11,
+      "source": "flask_methanol",
+      "target": "valve_H",
+      "port": "(0,5)"
+    },
+    {
+      "id": 30,
+      "sourceInternal": 16,
+      "targetInternal": 10,
+      "source": "valve_G",
+      "target": "separator",
+      "port": "(5,top)"
+    },
+    {
+      "id": 31,
+      "sourceInternal": 10,
+      "targetInternal": 16,
+      "source": "separator",
+      "target": "valve_G",
+      "port": "(bottom,3)"
+    },
+    {
+      "id": 32,
+      "sourceInternal": 3,
+      "targetInternal": 16,
+      "source": "flask_water",
+      "target": "valve_G",
+      "port": "(0,4)"
+    },
+    {
+      "id": 33,
+      "sourceInternal": 9,
+      "targetInternal": 20,
+      "source": "phase_A",
+      "target": "valve_Y",
+      "port": "(0,3)"
+    },
+    {
+      "id": 35,
+      "sourceInternal": 20,
+      "targetInternal": 9,
+      "source": "valve_Y",
+      "target": "phase_A",
+      "port": "(3,0)"
+    },
+    {
+      "id": 36,
+      "sourceInternal": 0,
+      "targetInternal": 20,
+      "source": "phase_B",
+      "target": "valve_Y",
+      "port": "(0,4)"
+    },
+    {
+      "id": 68,
+      "sourceInternal": 20,
+      "targetInternal": 0,
+      "source": "valve_Y",
+      "target": "phase_B",
+      "port": "(4,0)"
+    },
+    {
+      "id": 69,
+      "sourceInternal": 20,
+      "targetInternal": 6,
+      "source": "valve_Y",
+      "target": "cartridge_anhydrous MgSO4",
+      "port": "(5,in)"
+    },
+    {
+      "id": 70,
+      "sourceInternal": 6,
+      "targetInternal": 23,
+      "source": "cartridge_anhydrous MgSO4",
+      "target": "valve_K",
+      "port": "(out,3)"
+    },
+    {
+      "id": 71,
+      "sourceInternal": 4,
+      "targetInternal": 23,
+      "source": "flask_MTBE",
+      "target": "valve_K",
+      "port": "(0,4)"
+    },
+    {
+      "id": 72,
+      "sourceInternal": 23,
+      "targetInternal": 7,
+      "source": "valve_K",
+      "target": "rotavap",
+      "port": "(5,evaporate)"
+    },
+    {
+      "id": 73,
+      "sourceInternal": 7,
+      "targetInternal": 23,
+      "source": "rotavap",
+      "target": "valve_K",
+      "port": "(evaporate,5)"
+    },
+    {
+      "id": 74,
+      "sourceInternal": 7,
+      "targetInternal": 67,
+      "source": "rotavap",
+      "target": "valve_I",
+      "port": "(collect,3)"
+    },
+    {
+      "id": 75,
+      "sourceInternal": 5,
+      "targetInternal": 67,
+      "source": "flask_brine",
+      "target": "valve_I",
+      "port": "(0,4)"
+    },
+    {
+      "id": 76,
+      "sourceInternal": 26,
+      "targetInternal": 67,
+      "source": "flask_nitrogen",
+      "target": "valve_I",
+      "port": "(0,5)"
+    },
+    {
+      "id": 77,
+      "sourceInternal": 21,
+      "targetInternal": 10,
+      "source": "sensor_stirrer",
+      "target": "separator",
+      "port": "(,)"
+    },
+    {
+      "id": 78,
+      "sourceInternal": 16,
+      "targetInternal": 10,
+      "source": "valve_G",
+      "target": "separator",
+      "port": "(3,bottom)"
+    }
+  ]
+}

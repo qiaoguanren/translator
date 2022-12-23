@@ -1,0 +1,28 @@
+Commercial License for OEMs, ISVs and VARs
+
+The Cronin Group provides its XDL software Library under a dual license model
+designed to meet the development and distribution needs of both commercial
+distributors (such as OEMs, ISVs and VARs) and open source projects.
+
+For OEMs, ISVs, VARs and Other Distributors of Commercial Applications:
+
+OEMs (Original Equipment Manufacturers), ISVs (Independent Software Vendors),
+VARs (Value Added Resellers) and other distributors that combine and
+distribute commercially licensed software with XDL software must enter
+into a commercial license agreement with the Cronin Group.
+
+For Open Source Projects and Other Developers of Open Source Applications:
+
+For developers of Free Open Source Software ("FOSS") applications under
+the AGPL v3 that want to combine and distribute those FOSS applications with
+XDL software, Cronin Group's XDL open source software licensed under
+the AGPL v3 is the best option.
+
+For developers and distributors of open source software under a FOSS license
+other than the AGPL v3, the Cronin Group makes its AGPL v3-licensed XDL
+Libraries available under a FOSS Exception that enables use of the those
+XDL Libraries under certain conditions without causing the entire
+derivative work to be subject to the AGPL v3.
+
+For further details on the use of this software, please see:
+https://www.chem.gla.ac.uk/cronin/media/license/

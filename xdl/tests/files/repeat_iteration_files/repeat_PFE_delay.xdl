@@ -1,0 +1,160 @@
+<XDL>
+
+<Blueprint id='TEST_BP'>
+  <Hardware>
+    <Component id="reactor" type="reactor"/>
+    <Component id="separator" type="separator"/>
+    <Component id="separator2" type="separator"/>
+    <Component id="rotavap" type="rotavap"/>
+    <Component id="cartridge_mgso4" type="cartridge"/>
+    <Component id='product_flask' type='flask' />
+  </Hardware>
+
+  <Reagents>
+    <Reagent id='aldehyde' role='reagent' />
+    <Reagent id='nitrostyrene' role='reagent'  />
+    <Reagent id='transfer_solvent' role='solvent' />
+  </Reagents>
+
+  <Procedure>
+
+    <Add
+      vessel='reactor'
+      reagent='nitrostyrene'
+      amount='1 eq.'
+      confirm_solid='False'
+    />
+
+    <Add
+      vessel='reactor'
+      reagent='aldehyde'
+      amount='2 eq.'
+    />
+
+    <Repeat repeats='2'>
+
+      <Transfer
+        from_vessel='reactor'
+        to_vessel='separator2'
+        volume='all'
+        flush_tubing='True'
+      />
+
+      <SeparatePhases
+        separation_vessel='separator2'
+        lower_phase_vessel='reactor'
+        upper_phase_vessel='separator'
+        step_volume='0.2 mL'
+        high_conductivity_phase='bottom'
+      />
+    </Repeat>
+
+    <Transfer
+      from_vessel='reactor'
+      to_vessel='separator2'
+      volume='all'
+      flush_tubing='True'
+    />
+
+    <Separate
+      purpose='wash'
+      from_vessel='separator'
+      separation_vessel='separator'
+      to_vessel='rotavap'
+      through='cartridge_mgso4'
+      solvent='transfer_solvent'
+      product_phase='top'
+      solvent_volume='30 mL'
+      repeats='2'
+    />
+
+    <Evaporate
+      vessel='rotavap'
+      temp='40'
+      mode='auto'
+    />
+
+    <Evaporate
+      vessel='rotavap'
+      temp='40'
+      pressure='1 mbar'
+      mode='manual'
+      time='10 min'
+    />
+
+    <Repeat repeats='2'>
+      <Add
+        vessel='rotavap'
+        reagent='transfer_solvent'
+        volume='6 mL'
+        stir='True'
+        prime_n_times='0'
+      />
+      <Transfer
+        from_vessel='rotavap'
+        to_vessel='product_flask'
+        volume='all'
+        flush_tubing='True'
+      />
+    </Repeat>
+    <Purge
+      vessel='product_flask'
+      time='1 h'
+    />
+
+  </Procedure>
+
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+      <Component id="reactor1" type="reactor"/>
+      <Component id="reactor2" type="reactor"/>
+      <Component id="reactor3" type="reactor"/>
+      <Component id="reactor4" type="reactor"/>
+
+      <Component id="separator" type="separator"/>
+      <Component id="separator2" type="separator2"/>
+      <Component id="rotavap" type="rotavap"/>
+
+      <Component id="cartridge_mgso4_1" type="cartridge"/>
+      <Component id="cartridge_mgso4_2" type="cartridge"/>
+      <Component id="cartridge_mgso4_3" type="cartridge"/>
+      <Component id="cartridge_mgso4_4" type="cartridge"/>
+
+      <Component id='product1' type='flask' />
+      <Component id='product2' type='flask' />
+      <Component id='product3' type='flask' />
+      <Component id='product4' type='flask' />
+    </Hardware>
+
+    <Reagents>
+
+      <Reagent name='valeraldehyde' molecular_weight='86 g/mol' density='0.81 g/ml' role='reagent' />
+      <Reagent name='trans-nitrostyrene' molecular_weight='149 g/mol' solid='True' role='reagent' />
+      <Reagent name='water'  role='solvent' />
+      <Reagent name='et2o'  role='solvent' />
+    </Reagents>
+
+    <Procedure>
+
+      <Repeat r.type='reactor' c.type='cartridge' f.type='flask'>
+        <TEST_BP
+          reactor='r'
+          cartridge_mgso4='c'
+          product_flask='f'
+          separator='separator'
+          separator2='separator2'
+          rotavap='rotavap'
+          aldehyde='valeraldehyde'
+          nitrostyrene='trans-nitrostyrene'
+          transfer_solvent='et2o'
+          equiv_reference='nitrostyrene'
+          equiv_amount='10 mmol'
+        />
+      </Repeat>
+
+    </Procedure>
+</Synthesis>
+
+</XDL>

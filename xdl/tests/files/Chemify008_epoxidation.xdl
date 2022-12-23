@@ -1,0 +1,138 @@
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="cartridge_magnesium sulfate"
+      type="cartridge"
+      chemical="magnesium sulfate"
+    />
+    <Component
+      id="reactor"
+      type="reactor"
+    />
+    <Component
+      id="rotavap"
+      type="rotavap"
+    />
+    <Component
+      id="separator"
+      type="separator"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="28 % hydrogen peroxide"
+    />
+    <Reagent
+      name="DCM"
+    />
+    <Reagent
+      name="acetonitrile"
+    />
+    <Reagent
+      name="brine"
+    />
+    <Reagent
+      name="cis-cyclooctene"
+    />
+    <Reagent
+      name="methanol"
+    />
+    <Reagent
+      name="sodium metabisulphite water solution"
+    />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      vessel="reactor"
+      reagent="cis-cyclooctene"
+      volume="6.86 mL"
+    />
+    <Add
+      vessel="reactor"
+      reagent="methanol"
+      volume="34.1 mL"
+      stir="True"
+    />
+    <Add
+      vessel="reactor"
+      reagent="acetonitrile"
+      volume="4.77 mL"
+      stir="True"
+    />
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="30°C"
+      stir="true"
+    />
+    <Add
+      vessel="reactor"
+      reagent="28 % hydrogen peroxide"
+      volume="5.75 mL"
+      time="5 mins"
+      stir="True"
+    />
+    <Add
+      vessel="reactor"
+      reagent="methanol"
+      volume="0.5 mL"
+      stir="True"
+    />
+    <HeatChill
+      vessel="reactor"
+      temp="25°C"
+      time="16 hrs"
+      stir="true"
+    />
+    <Add
+      vessel="reactor"
+      reagent="brine"
+      volume="57 mL"
+      stir="True"
+    />
+    <Separate
+      purpose="extract"
+      from_vessel="reactor"
+      separation_vessel="separator"
+      to_vessel="separator"
+      product_phase="bottom"
+      solvent="DCM"
+      solvent_volume="57 mL"
+      repeats="4"
+    />
+    <Add
+      vessel="separator"
+      reagent="sodium metabisulphite water solution"
+      volume="28.4 mL"
+      stir="True"
+    />
+    <Stir
+      vessel="separator"
+      time="60 mins"
+    />
+    <Separate
+      purpose="extract"
+      from_vessel="separator"
+      separation_vessel="separator"
+      to_vessel="rotavap"
+      product_phase="bottom"
+      through="magnesium sulfate"
+    />
+    <Evaporate
+      vessel="rotavap"
+      temp="50°C"
+      pressure="278 mbar"
+      time="30 mins"
+      mode="auto"
+    />
+    <Dry
+      vessel="rotavap"
+      time="30 mins"
+      temp="50°C"
+      pressure="30 mbar"
+    />
+  </Procedure>
+
+</Synthesis>

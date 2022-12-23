@@ -1,0 +1,107 @@
+<Synthesis id="DMP">
+
+  <Hardware>
+    <Component
+      id="filter"
+      type="ChemputerFilter"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="glacial acetic acid"
+      density="1.05 g/mL"
+    />
+    <Reagent
+      name="the moist solid iodinane oxide"
+    />
+    <Reagent
+      name="acetone"
+    />
+    <Reagent
+      name="Oxone deionized water solution"
+      concentration="1.0 mol/L"
+    />
+    <Reagent
+      name="2-Iodobenzoic acid"
+      solid="True"
+    />
+    <Reagent
+      name="anhydrous ether"
+    />
+    <Reagent
+      name="acetic anhydride"
+    />
+    <Reagent
+      name="water"
+    />
+  </Reagents>
+
+  <Parameters>
+    <Parameter
+      id="filter"
+      type="volume"
+      min="250 mL"
+      max="350 mL"
+      value="200 mL"
+    />
+    <Parameter
+      id="dry_temperature_1"
+      type="temperature"
+      min="23°C"
+      max="27°C"
+      value="25.0°C"
+    />
+  </Parameters>
+
+  <Procedure>
+    <Add
+      vessel="filter"
+      reagent="Oxone deionized water solution"
+      amount="650 mmol"
+      port="top"
+    />
+    <HeatChill
+      vessel="filter"
+      temp="70.0 °C"
+      time="1200.0 secs"
+      stir="true"
+    />
+    <Filter
+      vessel="filter"
+    />
+    <Dry
+      vessel="filter"
+      time="300.0 secs"
+      param.temp="dry_temperature_1"
+    />
+    <Add
+      vessel="filter"
+      reagent="glacial acetic acid"
+      amount="157.5 g"
+      stir="True"
+      port="top"
+    />
+    <Add
+      vessel="filter"
+      reagent="acetic anhydride"
+      param.volume="acetic_anhydride_volume"
+      stir="True"
+      port="top"
+    />
+    <Filter
+      vessel="filter"
+    />
+    <WashSolid
+      vessel="filter"
+      solvent="anhydrous ether"
+      volume="80.0 mL"
+      stir="solvent"
+      repeats="3"
+    />
+    <Dry
+      vessel="filter"
+    />
+  </Procedure>
+
+</Synthesis>

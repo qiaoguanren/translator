@@ -36,4 +36,4 @@ properties become available as member variables.
 The final secret is that when a property is changed (e.g. :code:`self.time = '1 min'`)
 the new value is parsed and converted to standard units, or if the new value is
 :code:`'default'`, it will be replaced with the corresponding default value from
-DEFAULT_PROPS.
+``DEFAULT_PROPS``.

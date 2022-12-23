@@ -173,12 +173,12 @@ The vacuum valve consists of a valve attached to the flask, which is itself atta
 to an inert gas source and a vacuum. The vacuum device should be included if you are
 using a vacuum pump, or left out if you are just using a vacuum line.
 
-.. image:: vacuum_graph.png
+.. image:: assets/vacuum_graph.png
    :width: 600
 
 The other way is using the pneumatic controller.
 
-.. image:: pneumatic_controller_graph.png
+.. image:: assets/pneumatic_controller_graph.png
    :width: 600
 
 Both of these setups are supported by XDL, anything else isn't.

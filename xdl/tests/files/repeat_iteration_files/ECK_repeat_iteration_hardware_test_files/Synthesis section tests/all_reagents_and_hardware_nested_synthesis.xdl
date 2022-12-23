@@ -1,0 +1,43 @@
+<XDL>
+
+    <Synthesis>
+
+          <Hardware>
+             <Component id='reactor' type='reactor'/>
+             <Component id='UVVis' type='reactor'/>
+          </Hardware>
+
+      <Reagents>
+        <Reagent
+          name="reagent_12"
+          role="substrate" />
+        <Reagent
+          name="reagent_13"
+          role="substrate" />
+        <Reagent
+          name="reagent_14"
+          role="substrate" />
+        <Reagent
+          name="reagent_15"
+          role="substrate" />
+        <Reagent
+          name="solvent"
+          role="solvent" />
+      </Reagents>
+
+      <Procedure>
+        <Transfer
+            from_vessel="reactor"
+            to_vessel="UVVis"
+            amount="0.8 mL"
+        />
+        <Repeat rx.kind='Reagent'>
+            <Repeat rc.kind='Hardware'>
+                <Add reagent='rx' vessel='rc' amount='1 mL'/>
+            </Repeat>
+        </Repeat>
+        <Wait time="5 secs" />
+      </Procedure>
+
+    </Synthesis>
+    </XDL>

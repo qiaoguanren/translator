@@ -1,0 +1,23 @@
+<XDL>
+<Synthesis>
+    <Hardware>
+        <Component
+            id="reactor" type="reactor" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+        <Reagent name="water" molecular_weight="18 g/mol" density="1 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <Repeat repeats="3">
+            <Repeat>
+                <Add reagent="THF" vessel="reactor" amount="1 mL"/>
+                <MockMeasure target_repeats="2"/>
+            </Repeat>
+            <Add reagent="water" vessel="reactor" amount="1 mL"/>
+        </Repeat>
+    </Procedure>
+</Synthesis>
+</XDL>

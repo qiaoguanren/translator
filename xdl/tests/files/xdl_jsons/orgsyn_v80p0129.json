@@ -1,0 +1,310 @@
+{
+  "metadata": {},
+  "steps": [
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "copper(I)iodide",
+        "mass": "0.2 g",
+        "amount": null,
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "False",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "758f6d14-3879-4c31-b604-a149fff5a806",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "hydriodic acid",
+        "volume": "40 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "a4ce7e2e-3ba1-404a-b855-6227c5a8b262",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "propiolic acid",
+        "volume": "10 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": "60 s",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "76845f99-410e-44b8-a27b-e52ad480985c",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "filter",
+        "temp": "130 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "23d06a12-7c2a-43d1-8476-4cf40be60a88",
+      "section": "no_section"
+    },
+    {
+      "name": "Stir",
+      "properties": {
+        "vessel": "filter",
+        "time": "30 min",
+        "continue_stirring": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "26a5a730-b282-4039-a4b4-2ce0b656401d",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "filter",
+        "temp": "28 \u00b0C",
+        "active": "False",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "f2491b32-b8ef-4ec8-aa4f-6ae85bdbf93b",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "25 \u00b0C",
+        "time": "15 min",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "422d9a77-4438-400d-b271-8564ab705162",
+      "section": "no_section"
+    },
+    {
+      "name": "Filter",
+      "properties": {
+        "vessel": "filter",
+        "wait_time": "2 min",
+        "aspiration_speed": "5.0",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "temp": null,
+        "volume": null,
+        "continue_heatchill": "False",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "a8b8e0a5-93c3-4932-9a7f-f4bac8c0a6fa",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "filter",
+        "solvent": "distilled water",
+        "volume": "70 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "True",
+        "time": "30 s",
+        "stir_speed": "500 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "3",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "4e4982c1-77d2-4ed1-ad09-51682c8e4f6b",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "filter",
+        "time": "60 min",
+        "temp": null,
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "4ce09a8b-cada-41bd-854d-3f495ac3fd09",
+      "section": "no_section"
+    }
+  ],
+  "reagents": [
+    {
+      "name": "copper(I)iodide",
+      "properties": {
+        "name": "copper(I)iodide",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "distilled water",
+      "properties": {
+        "name": "distilled water",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "hydriodic acid",
+      "properties": {
+        "name": "hydriodic acid",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "propiolic acid",
+      "properties": {
+        "name": "propiolic acid",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    }
+  ],
+  "hardware": [
+    {
+      "name": "filter",
+      "properties": {
+        "id": "filter",
+        "component_type": "filter",
+        "chemical": null,
+        "comment": ""
+      }
+    }
+  ]
+}

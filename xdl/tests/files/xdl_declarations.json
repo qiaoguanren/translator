@@ -1,0 +1,175 @@
+{
+  "nodes": [
+    {
+      "id": "Valve_D",
+      "type": "valve",
+      "x": 520,
+      "y": 280,
+      "internalId": 2,
+      "label": "Valve_D",
+      "class": "ChemputerValve",
+      "name": "Valve_D",
+      "address": "192.168.1.33",
+      "current_volume": 0
+    },
+    {
+      "id": "Pump_D",
+      "type": "pump",
+      "x": 520,
+      "y": 160,
+      "internalId": 22,
+      "label": "Pump_D",
+      "class": "ChemputerPump",
+      "name": "Pump_D",
+      "address": "192.168.1.23",
+      "max_volume": 10,
+      "current_volume": 0
+    },
+    {
+      "id": "reactor",
+      "type": "reactor",
+      "x": 600,
+      "y": 360,
+      "internalId": 74,
+      "label": "reactor",
+      "class": "ChemputerReactor",
+      "name": "reactor",
+      "current_volume": 0,
+      "max_volume": 100,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "3,5-bis(trifluoromethyl)bromobenzene",
+      "type": "flask",
+      "x": 520,
+      "y": 400,
+      "internalId": 81,
+      "label": "3,5-bis(trifluoromethyl)bromobenzene",
+      "class": "ChemputerFlask",
+      "name": "3,5-bis(trifluoromethyl)bromobenzene",
+      "chemical": "3,5-bis(trifluoromethyl)bromobenzene",
+      "current_volume": 3,
+      "max_volume": 10,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "Waste_D",
+      "type": "waste",
+      "x": 600,
+      "y": 240,
+      "internalId": 3,
+      "label": "Waste_D",
+      "class": "ChemputerWaste",
+      "name": "Waste_D",
+      "current_volume": 0,
+      "max_volume": 100,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "reactor2",
+      "type": "reactor",
+      "x": 440,
+      "y": 360,
+      "internalId": 0,
+      "label": "reactor2",
+      "class": "ChemputerReactor",
+      "name": "reactor2",
+      "current_volume": 0,
+      "max_volume": 100,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "flask_acetone",
+      "type": "flask",
+      "x": 360,
+      "y": 240,
+      "class": "ChemputerFlask",
+      "name": "flask_acetone",
+      "chemical": "acetone",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false,
+      "internalId": 6,
+      "label": "flask_acetone"
+    }
+  ],
+  "links": [
+    {
+      "id": 32,
+      "sourceInternal": 2,
+      "targetInternal": 22,
+      "source": "Valve_D",
+      "target": "Pump_D",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 33,
+      "sourceInternal": 22,
+      "targetInternal": 2,
+      "source": "Pump_D",
+      "target": "Valve_D",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 77,
+      "sourceInternal": 74,
+      "targetInternal": 2,
+      "source": "reactor",
+      "target": "Valve_D",
+      "port": "(0,5)"
+    },
+    {
+      "id": 78,
+      "sourceInternal": 2,
+      "targetInternal": 74,
+      "source": "Valve_D",
+      "target": "reactor",
+      "port": "(5,0)"
+    },
+    {
+      "id": 80,
+      "sourceInternal": 81,
+      "targetInternal": 2,
+      "source": "3,5-bis(trifluoromethyl)bromobenzene",
+      "target": "Valve_D",
+      "port": "(0,4)"
+    },
+    {
+      "id": 4,
+      "sourceInternal": 2,
+      "targetInternal": 3,
+      "source": "Valve_D",
+      "target": "Waste_D",
+      "port": "(0,0)"
+    },
+    {
+      "id": 1,
+      "sourceInternal": 0,
+      "targetInternal": 2,
+      "source": "reactor2",
+      "target": "Valve_D",
+      "port": "(0,3)"
+    },
+    {
+      "id": 5,
+      "sourceInternal": 2,
+      "targetInternal": 0,
+      "source": "Valve_D",
+      "target": "reactor2",
+      "port": "(3,0)"
+    },
+    {
+      "id": 7,
+      "sourceInternal": 6,
+      "targetInternal": 2,
+      "source": "flask_acetone",
+      "target": "Valve_D",
+      "port": "(0,2)"
+    }
+  ]
+}

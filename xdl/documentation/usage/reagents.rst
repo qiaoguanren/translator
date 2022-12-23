@@ -23,7 +23,7 @@ properties, listed here.
 +---------------------------------+---------------------------------------------------------------------------------------------------+
 | **last_minute_addition_volume** | Volume of last_minute_addition reagent to add.                                                    |
 +---------------------------------+---------------------------------------------------------------------------------------------------+
-| **preserve**                    | Reagent is valuable. Use minimum amounts (i.e. don't use for cleaning or filter dead volume)      |  
+| **preserve**                    | Reagent is valuable. Use minimum amounts (i.e. don't use for cleaning or filter dead volume)      |
 +---------------------------------+---------------------------------------------------------------------------------------------------+
 
 Example

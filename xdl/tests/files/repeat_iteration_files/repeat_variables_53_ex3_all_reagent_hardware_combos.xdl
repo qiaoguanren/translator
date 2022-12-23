@@ -1,0 +1,34 @@
+<XDL>
+
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="buffer_flask"
+      type="flask"
+    />
+    <Component
+      id="buffer_flask2"
+      type="flask"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="ether"
+      role="substrate" />
+    <Reagent
+      name="water"
+      role="substrate" />
+  </Reagents>
+
+  <Procedure>
+    <Repeat rn.kind="Reagent">
+      <Repeat rx.kind="Hardware" >
+        <Add reagent='rn' vessel='rx' amount='5 mL'/>
+      </Repeat>
+    </Repeat>
+  </Procedure>
+
+</Synthesis>
+</XDL>

@@ -1,0 +1,34 @@
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="filter"
+      type="filter"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="ether"
+    />
+  </Reagents>
+
+  <Procedure>
+    <Repeat
+      repeats="2"
+    >
+      <Wait
+        time="5 secs"
+      />
+      <Wait
+        time="10 secs"
+      />
+      <Add
+        vessel="filter"
+        reagent="ether"
+        volume="20 mL"
+      />
+    </Repeat>
+  </Procedure>
+
+</Synthesis>

@@ -1,0 +1,31 @@
+<XDL>
+<Synthesis>
+    <Hardware>
+        <Component
+            id="reactor"
+            type="reactor" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="a_solvent" molecular_weight="262.29 g/mol" solid="true" role="reagent"/>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+        <Reagent name="diethyl ether" molecular_weight="74.12 g/mol" density="0.706 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <Wait
+          time="5 secs"
+        />
+        <Repeat a_solvent.role="solvent">
+            <Add reagent="a_solvent" vessel="reactor" amount="3 mL"/>
+            <Add reagent="PPh3" vessel="reactor" amount="1 g"/>
+            <Repeat repeats="2">
+                <Add reagent="a_solvent" vessel="reactor" amount="5 mL"/>
+            </Repeat>
+        </Repeat>
+        <Wait
+          time="10 secs"
+        />
+    </Procedure>
+</Synthesis>
+</XDL>

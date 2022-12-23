@@ -1,0 +1,149 @@
+<XDL>
+<Blueprint id="Outer_Cyclic_Mitsunobu">
+    <Hardware>
+        <Component id="reactor_o" type="reactor"/>
+        <Component id="azodicarboxylate_vial_o" type="reactor"/>
+    </Hardware>
+    <Reagents>
+        <Reagent name="Z-Hyp-OH_o" molecular_weight="201.11 g/mol" solid="true" role="reagent"/>
+        <Reagent id="phosphine_o"/>
+        <Reagent name="diethyl_ether_o" molecular_weight="33.44 g/mol" density="0.706 g/mL" role="solvent"/>
+        <Reagent name="THF_o" molecular_weight="256.66 g/mol" density="0.889 g/mL" role="solvent"/>
+    </Reagents>
+    <Procedure>
+        <Inner_Cyclic_Mitsunobu
+            Z-Hyp-OH_i="Z-Hyp-OH_o"
+            azodicarboxylate_vial="azodicarboxylate_vial_o"
+            THF_i="THF_o"
+            reactor="reactor_o"
+            equiv_reference="THF_i"
+            equiv_amount="1 mL" />
+    </Procedure>
+</Blueprint>
+<Blueprint id="Inner_Cyclic_Mitsunobu">
+    <Hardware>
+        <Component id="reactor" type="reactor"/>
+        <Component id="azodicarboxylate_vial" type="reactor"/>
+    </Hardware>
+
+    <Parameters>
+        <Parameter id="reaction_time" type="time" value="8 h"/>
+        <Parameter id="reaction_temp" type="temp" value="25 °C"/>
+        <Parameter id="reaction_volume" type="volume" value="16.2 mL"/>
+        <Parameter id="precipitate_volume" type="volume" value="20 mL"/>
+    </Parameters>
+
+    <Reagents>
+        <Reagent name="Z-Hyp-OH_i" molecular_weight="201.23 g/mol" solid="true" role="reagent"/>
+        <Reagent name="PPh3_i" molecular_weight="212.34 g/mol" solid="true" role="reagent"/>
+        <Reagent name="diethyl_ether_i" molecular_weight="33.45 g/mol" density="0.706 g/mL" role="solvent"/>
+        <Reagent name="THF_i" molecular_weight="256.78 g/mol" density="0.889 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <Add reagent="Z-Hyp-OH_i" vessel="reactor" amount="1 eq"/>
+        <Add reagent="PPh3_i" vessel="reactor" amount="1.197 eq"/>
+        <Add reagent="diethyl_ether_i" vessel="reactor" amount="10 eq"/>
+
+        <Dissolve
+            vessel="reactor"
+            solvent="THF_i"
+            param.volume="reaction_volume"
+            time="60 s"/>
+
+        <Dissolve
+            vessel="azodicarboxylate_vial"
+            solvent="THF_i"
+            volume="2 mL"
+            time="60 s" />
+        <HeatChillToTemp vessel="reactor" temp="0 °C" stir="True" />
+        <Transfer
+            from_vessel="azodicarboxylate_vial"
+            to_vessel="reactor"
+            volume="all"
+            time="10 min"
+            rinsing_volume="1 mL"
+            rinsing_repeats="3"
+            rinse_withdrawal_excess="0.0" />
+
+        <ResetHandling
+            solvent="THF_i" />
+        <ResetHandling
+            solvent="diethyl_ether_i" />
+
+        <HeatChill
+            vessel="reactor"
+            param.temp="reaction_temp"
+            param.time="reaction_time"
+            stir="True" />
+        <Evaporate
+            vessel="reactor"
+            temp="45 °C"
+            time="1 h"
+            pressure="50 mbar"
+            mode="auto" />
+
+        <Dissolve
+            vessel="reactor"
+            solvent="diethyl_ether_i"
+            param.volume="precipitate_volume"
+            time="5 min" />
+
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+        <Component
+            id="reactor"
+            type="reactor" />
+        <Component
+            id="rotavap"
+            type="rotavap" />
+        <Component
+            id="DIAD_vial"
+            type="flask"
+            chemical="DIAD" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="Z-Hyp-OH" molecular_weight="200.0 g/mol" solid="true" role="reagent"/>
+        <Reagent name="DIAD" molecular_weight="222.22 g/mol" solid="true" role="reagent"/>
+        <Reagent name="methanol" molecular_weight="44.44 g/mol" role="solvent"/>
+        <Reagent name="Z-Hyp-OH_o" molecular_weight="201.11 g/mol" solid="true" role="reagent"/>
+        <Reagent name="diethyl_ether_o" molecular_weight="33.44 g/mol" density="0.706 g/mL" role="solvent"/>
+        <Reagent name="THF_o" molecular_weight="256.66 g/mol" density="0.889 g/mL" role="solvent"/>
+        <Reagent name="Z-Hyp-OH_i" molecular_weight="201.23 g/mol" solid="true" role="reagent"/>
+        <Reagent name="PPh3_i" molecular_weight="212.34 g/mol" solid="true" role="reagent"/>
+        <Reagent name="diethyl_ether_i" molecular_weight="33.45 g/mol" density="0.706 g/mL" role="solvent"/>
+        <Reagent name="THF_i" molecular_weight="256.78 g/mol" density="0.889 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+    <Outer_Cyclic_Mitsunobu
+        Z-Hyp-OH_o="Z-Hyp-OH"
+        phosphine_o="PPh3_i"
+        azodicarboxylate_vial_o="DIAD_vial"
+        reactor_o="reactor"
+        equiv_reference="Z-Hyp-OH"
+        equiv_amount="1 g" />
+    <Transfer
+        from_vessel="reactor"
+        to_vessel="rotavap"
+        volume="all"
+        rinsing_volume="20 mL"
+        rinsing_repeats="3"
+        rinse_withdrawal_excess="0.0" />
+    <ResetHandling
+        solvent="methanol" />
+    <Evaporate
+        vessel="rotavap"
+        time="30 min" />
+    <Dry
+        vessel="rotavap"
+        time="30 min" />
+    <ResetHandling
+        solvent="methanol" />
+    </Procedure>
+</Synthesis>
+</XDL>

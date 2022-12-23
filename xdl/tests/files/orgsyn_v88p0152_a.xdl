@@ -1,0 +1,79 @@
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="filter"
+      type="filter"
+    />
+    <Component
+      id="flask_washings"
+      type="flask"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="anhydrous Et2O"
+    />
+    <Reagent
+      name="benzyl carbamate"
+      solid="true"
+    />
+    <Reagent
+      name="glyoxylic acid monohydrate"
+      solid="true"
+    />
+    <Reagent
+      name="hexanes-Et2O"
+    />
+  </Reagents>
+
+  <Procedure>
+    <AddSolid
+      vessel="filter"
+      reagent="benzyl carbamate"
+      mass="30.23 g"
+    />
+    <AddSolid
+      vessel="filter"
+      reagent="glyoxylic acid monohydrate"
+      mass="20.25 g"
+    />
+    <EvacuateAndRefill
+      vessel="filter"
+    />
+    <Add
+      vessel="filter"
+      reagent="anhydrous Et2O"
+      volume="200 mL"
+    />
+    <HeatChill
+      vessel="filter"
+      temp="34.5°C"
+      time="12 hrs"
+      stir="true"
+      stir_speed="200.0 RPM"
+    />
+    <HeatChillToTemp
+      vessel="filter"
+      temp="25°C"
+      continue_heatchill="False"
+      stir="true"
+    />
+    <Filter
+      vessel="filter"
+      filtrate_vessel="flask_washings"
+    />
+    <WashSolid
+      vessel="filter"
+      solvent="hexanes-Et2O"
+      volume="20 mL"
+      filtrate_vessel="flask_washings"
+      repeats="6"
+    />
+    <Dry
+      vessel="filter"
+    />
+  </Procedure>
+
+</Synthesis>

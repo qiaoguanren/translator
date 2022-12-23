@@ -1,15 +1,18 @@
-from chempiler import Chempiler
-import ChemputerAPI
 import argparse
 import os
+
 import appdirs
+import ChemputerAPI
+from chempiler import Chempiler
+
 from xdl import XDL
+
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('xdl_file', type=str)
-    parser.add_argument('graph_file', type=str)
-    parser.add_argument('--interactive', action='store_true')
+    parser.add_argument("xdl_file", type=str)
+    parser.add_argument("graph_file", type=str)
+    parser.add_argument("--interactive", action="store_true")
     args = parser.parse_args()
 
     if not os.path.exists(args.xdl_file):
@@ -22,15 +25,15 @@ def main():
     x.prepare_for_execution(args.graph_file, interactive=args.interactive)
 
     c = Chempiler(
-        experiment_code='test',
-        output_dir=appdirs.user_data_dir('xdl'),
+        experiment_code="test",
+        output_dir=appdirs.user_data_dir("xdl"),
         graph_file=args.graph_file,
         simulation=True,
-        device_modules=[ChemputerAPI]
+        device_modules=[ChemputerAPI],
     )
 
     x.execute(c)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

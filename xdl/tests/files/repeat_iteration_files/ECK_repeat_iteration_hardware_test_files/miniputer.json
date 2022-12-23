@@ -1,0 +1,524 @@
+{
+  "nodes": [
+    {
+      "id": "pump1",
+      "type": "pump",
+      "x": 400,
+      "y": 160,
+      "internalId": 0,
+      "label": "pump1",
+      "class": "ChemputerPump",
+      "name": "pump1",
+      "address": "192.168.1.10",
+      "max_volume": 10,
+      "current_volume": 0
+    },
+    {
+      "id": "valve1",
+      "type": "valve",
+      "x": 400,
+      "y": 280,
+      "internalId": 3,
+      "label": "valve1",
+      "class": "ChemputerValve",
+      "name": "valve1",
+      "address": "192.168.1.28",
+      "current_volume": 0
+    },
+    {
+      "id": "waste1",
+      "type": "waste",
+      "x": 480,
+      "y": 160,
+      "internalId": 8,
+      "label": "waste1",
+      "class": "ChemputerWaste",
+      "name": "waste1",
+      "current_volume": 0,
+      "max_volume": 2000,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "pump2",
+      "type": "pump",
+      "x": 600,
+      "y": 160,
+      "internalId": 1,
+      "label": "pump2",
+      "class": "ChemputerPump",
+      "name": "pump2",
+      "address": "192.168.1.11",
+      "max_volume": 10,
+      "current_volume": 0
+    },
+    {
+      "id": "valve2",
+      "type": "valve",
+      "x": 600,
+      "y": 280,
+      "internalId": 2,
+      "label": "valve2",
+      "class": "ChemputerValve",
+      "name": "valve2",
+      "address": "192.168.1.25",
+      "current_volume": 0
+    },
+    {
+      "id": "waste2",
+      "type": "waste",
+      "x": 680,
+      "y": 160,
+      "internalId": 4,
+      "label": "waste2",
+      "class": "ChemputerWaste",
+      "name": "waste2",
+      "current_volume": 0,
+      "max_volume": 2000,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "pump3",
+      "type": "pump",
+      "x": 800,
+      "y": 160,
+      "internalId": 5,
+      "label": "pump3",
+      "class": "ChemputerPump",
+      "name": "pump3",
+      "address": "192.168.1.29",
+      "max_volume": 10,
+      "current_volume": 0
+    },
+    {
+      "id": "waste3",
+      "type": "waste",
+      "x": 880,
+      "y": 160,
+      "internalId": 6,
+      "label": "waste3",
+      "class": "ChemputerWaste",
+      "name": "waste3",
+      "current_volume": 0,
+      "max_volume": 2000,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "valve3",
+      "type": "valve",
+      "x": 800,
+      "y": 280,
+      "internalId": 7,
+      "label": "valve3",
+      "class": "ChemputerValve",
+      "name": "valve3",
+      "address": "192.168.1.26",
+      "current_volume": 0
+    },
+    {
+      "id": "reactor",
+      "type": "reactor",
+      "x": 680,
+      "y": 400,
+      "internalId": 22,
+      "label": "reactor",
+      "class": "ChemputerReactor",
+      "name": "reactor",
+      "current_volume": 0,
+      "max_volume": 100,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "reagent_14",
+      "type": "flask",
+      "x": 240,
+      "y": 240,
+      "internalId": 25,
+      "label": "reagent_14",
+      "class": "ChemputerFlask",
+      "name": "reagent_14",
+      "chemical": "reagent_14",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "reagent_13",
+      "type": "flask",
+      "x": 240,
+      "y": 320,
+      "internalId": 26,
+      "label": "reagent_13",
+      "class": "ChemputerFlask",
+      "name": "reagent_13",
+      "chemical": "reagent_13",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "reagent_12",
+      "type": "flask",
+      "x": 240,
+      "y": 400,
+      "internalId": 27,
+      "label": "reagent_12",
+      "class": "ChemputerFlask",
+      "name": "reagent_12",
+      "chemical": "reagent_12",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "reagent_15",
+      "type": "flask",
+      "x": 240,
+      "y": 160,
+      "internalId": 31,
+      "label": "reagent_15",
+      "class": "ChemputerFlask",
+      "name": "reagent_15",
+      "chemical": "reagent_15",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "UVVis",
+      "type": "reactor",
+      "x": 520,
+      "y": 400,
+      "internalId": 33,
+      "label": "UVVis",
+      "class": "ChemputerReactor",
+      "name": "UVVis",
+      "current_volume": 0,
+      "max_volume": 100,
+      "necks": 1,
+      "can_filter": false
+    },
+    {
+      "id": "reagent_31",
+      "type": "flask",
+      "x": 960,
+      "y": 160,
+      "internalId": 38,
+      "label": "reagent_31",
+      "class": "ChemputerFlask",
+      "name": "reagent_31",
+      "chemical": "reagent_31",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "reagent_34",
+      "type": "flask",
+      "x": 960,
+      "y": 320,
+      "internalId": 39,
+      "label": "reagent_34",
+      "class": "ChemputerFlask",
+      "name": "reagent_34",
+      "chemical": "reagent_34",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "reagent_35",
+      "type": "flask",
+      "x": 960,
+      "y": 400,
+      "internalId": 40,
+      "label": "reagent_35",
+      "class": "ChemputerFlask",
+      "name": "reagent_35",
+      "chemical": "reagent_35",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "reagent_33",
+      "type": "flask",
+      "x": 960,
+      "y": 240,
+      "internalId": 44,
+      "label": "reagent_33",
+      "class": "ChemputerFlask",
+      "name": "reagent_33",
+      "chemical": "reagent_33",
+      "current_volume": 100,
+      "max_volume": 100,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "solvent",
+      "type": "flask",
+      "x": 600,
+      "y": 400,
+      "internalId": 34,
+      "label": "solvent",
+      "class": "ChemputerFlask",
+      "name": "solvent",
+      "chemical": "solvent",
+      "current_volume": 1000,
+      "max_volume": 1000,
+      "can_filter": false,
+      "buffer_flask": false
+    },
+    {
+      "id": "rctdigital",
+      "type": "heater",
+      "x": 680,
+      "y": 480,
+      "internalId": 46,
+      "label": "rctdigital",
+      "class": "RCTDigitalHotplate",
+      "name": "rctdigital",
+      "port": "5000",
+      "address": "192.168.1.2",
+      "connection_mode": "tcpip",
+      "temp_sensor": "external"
+    }
+  ],
+  "links": [
+    {
+      "id": 10,
+      "sourceInternal": 3,
+      "targetInternal": 8,
+      "source": "valve1",
+      "target": "waste1",
+      "port": "(0,0)"
+    },
+    {
+      "id": 12,
+      "sourceInternal": 1,
+      "targetInternal": 2,
+      "source": "pump2",
+      "target": "valve2",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 13,
+      "sourceInternal": 2,
+      "targetInternal": 1,
+      "source": "valve2",
+      "target": "pump2",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 14,
+      "sourceInternal": 5,
+      "targetInternal": 7,
+      "source": "pump3",
+      "target": "valve3",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 15,
+      "sourceInternal": 7,
+      "targetInternal": 5,
+      "source": "valve3",
+      "target": "pump3",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 9,
+      "sourceInternal": 0,
+      "targetInternal": 3,
+      "source": "pump1",
+      "target": "valve1",
+      "port": "(0,-1)"
+    },
+    {
+      "id": 11,
+      "sourceInternal": 3,
+      "targetInternal": 0,
+      "source": "valve1",
+      "target": "pump1",
+      "port": "(-1,0)"
+    },
+    {
+      "id": 16,
+      "sourceInternal": 2,
+      "targetInternal": 4,
+      "source": "valve2",
+      "target": "waste2",
+      "port": "(0,0)"
+    },
+    {
+      "id": 17,
+      "sourceInternal": 7,
+      "targetInternal": 6,
+      "source": "valve3",
+      "target": "waste3",
+      "port": "(0,0)"
+    },
+    {
+      "id": 19,
+      "sourceInternal": 2,
+      "targetInternal": 7,
+      "source": "valve2",
+      "target": "valve3",
+      "port": "(1,2)"
+    },
+    {
+      "id": 20,
+      "sourceInternal": 7,
+      "targetInternal": 2,
+      "source": "valve3",
+      "target": "valve2",
+      "port": "(2,1)"
+    },
+    {
+      "id": 18,
+      "sourceInternal": 3,
+      "targetInternal": 2,
+      "source": "valve1",
+      "target": "valve2",
+      "port": "(1,2)"
+    },
+    {
+      "id": 21,
+      "sourceInternal": 2,
+      "targetInternal": 3,
+      "source": "valve2",
+      "target": "valve1",
+      "port": "(2,1)"
+    },
+    {
+      "id": 23,
+      "sourceInternal": 2,
+      "targetInternal": 22,
+      "source": "valve2",
+      "target": "reactor",
+      "port": "(3,0)"
+    },
+    {
+      "id": 24,
+      "sourceInternal": 22,
+      "targetInternal": 2,
+      "source": "reactor",
+      "target": "valve2",
+      "port": "(0,3)"
+    },
+    {
+      "id": 28,
+      "sourceInternal": 27,
+      "targetInternal": 3,
+      "source": "reagent_12",
+      "target": "valve1",
+      "port": "(0,2)"
+    },
+    {
+      "id": 29,
+      "sourceInternal": 26,
+      "targetInternal": 3,
+      "source": "reagent_13",
+      "target": "valve1",
+      "port": "(0,3)"
+    },
+    {
+      "id": 30,
+      "sourceInternal": 25,
+      "targetInternal": 3,
+      "source": "reagent_14",
+      "target": "valve1",
+      "port": "(0,4)"
+    },
+    {
+      "id": 32,
+      "sourceInternal": 31,
+      "targetInternal": 3,
+      "source": "reagent_15",
+      "target": "valve1",
+      "port": "(0,5)"
+    },
+    {
+      "id": 35,
+      "sourceInternal": 33,
+      "targetInternal": 2,
+      "source": "UVVis",
+      "target": "valve2",
+      "port": "(0,5)"
+    },
+    {
+      "id": 36,
+      "sourceInternal": 2,
+      "targetInternal": 33,
+      "source": "valve2",
+      "target": "UVVis",
+      "port": "(5,0)"
+    },
+    {
+      "id": 41,
+      "sourceInternal": 38,
+      "targetInternal": 7,
+      "source": "reagent_31",
+      "target": "valve3",
+      "port": "(0,1)"
+    },
+    {
+      "id": 42,
+      "sourceInternal": 39,
+      "targetInternal": 7,
+      "source": "reagent_34",
+      "target": "valve3",
+      "port": "(0,4)"
+    },
+    {
+      "id": 43,
+      "sourceInternal": 40,
+      "targetInternal": 7,
+      "source": "reagent_35",
+      "target": "valve3",
+      "port": "(0,5)"
+    },
+    {
+      "id": 45,
+      "sourceInternal": 44,
+      "targetInternal": 7,
+      "source": "reagent_33",
+      "target": "valve3",
+      "port": "(0,3)"
+    },
+    {
+      "id": 37,
+      "sourceInternal": 34,
+      "targetInternal": 2,
+      "source": "solvent",
+      "target": "valve2",
+      "port": "(0,4)"
+    },
+    {
+      "id": 48,
+      "sourceInternal": 46,
+      "targetInternal": 22,
+      "source": "rctdigital",
+      "target": "reactor",
+      "port": "(,)"
+    },
+    {
+      "id": 47,
+      "sourceInternal": 46,
+      "targetInternal": 33,
+      "source": "rctdigital",
+      "target": "UVVis",
+      "port": "(,)"
+    }
+  ]
+}

@@ -9,4 +9,4 @@ tested to a degree on Windows.
 Install from source::
 
    git clone https://gitlab.com/croningroup/chemputer/xdl.git
-   cd xdl; pip install -e .
+   pip install -e ./xdl

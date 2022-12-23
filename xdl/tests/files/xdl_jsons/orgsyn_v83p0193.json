@@ -1,0 +1,480 @@
+{
+  "metadata": {},
+  "steps": [
+    {
+      "name": "EvacuateAndRefill",
+      "properties": {
+        "vessel": "reactor",
+        "gas": null,
+        "repeats": "3",
+        "after_inert_gas_wait_time": "60 s",
+        "after_vacuum_wait_time": "60 s",
+        "vacuum_pressure": "50 mbar",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "5a54a487-5a70-4841-8020-8675a6b67e0e",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "2 methylcyclohexanone",
+        "volume": "10 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "eef60bc6-a1fa-491c-bdeb-6a8399418a1b",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "triethylamine",
+        "volume": "13.9 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "c79c340c-dd23-408f-82bf-4bf1cdc11fd4",
+      "section": "no_section"
+    },
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "t-butyldimethylsilyl chloride(TBDMSCl)",
+        "mass": "15.1 g",
+        "amount": null,
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "True",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "fa40737b-2932-41b7-a3d6-daf9f806fbb4",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "sodium iodide acetonitrile solution",
+        "volume": "100 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": "30 min",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "3ea92c18-c8c7-4aee-8b70-c5e35a655f55",
+      "section": "no_section"
+    },
+    {
+      "name": "Stir",
+      "properties": {
+        "vessel": "reactor",
+        "time": "18 h",
+        "continue_stirring": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "ba027b1c-dcaa-4048-ba64-94a3cd3ad918",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "saturated sodium bicarbonate solution",
+        "volume": "100 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "4bd9db60-2736-4ca0-977b-7b8d04e31c62",
+      "section": "no_section"
+    },
+    {
+      "name": "Separate",
+      "properties": {
+        "purpose": "extract",
+        "from_vessel": "reactor",
+        "separation_vessel": "separator",
+        "to_vessel": "separator",
+        "product_phase": "top",
+        "solvent": "hexane",
+        "through": null,
+        "from_port": null,
+        "to_port": "bottom",
+        "solvent_volume": "200 mL",
+        "repeats": "2",
+        "waste_phase_to_vessel": null,
+        "waste_phase_to_port": null,
+        "remove_dead_volume": "True",
+        "stir_speed": "600 RPM",
+        "stir_time": "5 min",
+        "settling_time": "5 min",
+        "high_conductivity_phase": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "98e74682-6829-44f2-88da-2881d6976020",
+      "section": "no_section"
+    },
+    {
+      "name": "Separate",
+      "properties": {
+        "purpose": "wash",
+        "from_vessel": "separator",
+        "separation_vessel": "separator",
+        "to_vessel": "rotavap",
+        "product_phase": "top",
+        "solvent": "brine",
+        "through": "MgSO4",
+        "from_port": null,
+        "to_port": "evaporate",
+        "solvent_volume": "40 mL",
+        "repeats": "1",
+        "waste_phase_to_vessel": null,
+        "waste_phase_to_port": null,
+        "remove_dead_volume": "True",
+        "stir_speed": "600 RPM",
+        "stir_time": "5 min",
+        "settling_time": "5 min",
+        "high_conductivity_phase": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "c8aadcf7-f3d3-427f-ade3-31989629ba1d",
+      "section": "no_section"
+    },
+    {
+      "name": "Evaporate",
+      "properties": {
+        "vessel": "rotavap",
+        "temp": "30 \u00b0C",
+        "pressure": "26.66 mbar",
+        "time": "30 min",
+        "stir_speed": "150 RPM",
+        "mode": "auto",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "f43dc7ad-2f81-4f38-b550-50400601054d",
+      "section": "no_section"
+    },
+    {
+      "name": "FilterThrough",
+      "properties": {
+        "from_vessel": "rotavap",
+        "to_vessel": "product",
+        "through": "silica-gel",
+        "eluting_solvent": "hexane",
+        "eluting_volume": "1000 mL",
+        "eluting_repeats": "1",
+        "residence_time": null,
+        "move_speed": "5.0",
+        "aspiration_speed": "5.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "6d51489d-b6ad-4024-a83c-f53b6f5ebea4",
+      "section": "no_section"
+    }
+  ],
+  "reagents": [
+    {
+      "name": "2 methylcyclohexanone",
+      "properties": {
+        "name": "2 methylcyclohexanone",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "brine",
+      "properties": {
+        "name": "brine",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "hexane",
+      "properties": {
+        "name": "hexane",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "saturated sodium bicarbonate solution",
+      "properties": {
+        "name": "saturated sodium bicarbonate solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "sodium iodide acetonitrile solution",
+      "properties": {
+        "name": "sodium iodide acetonitrile solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "t-butyldimethylsilyl chloride(TBDMSCl)",
+      "properties": {
+        "name": "t-butyldimethylsilyl chloride(TBDMSCl)",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "triethylamine",
+      "properties": {
+        "name": "triethylamine",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    }
+  ],
+  "hardware": [
+    {
+      "name": "cartridge_MgSO4",
+      "properties": {
+        "id": "cartridge_MgSO4",
+        "component_type": "cartridge",
+        "chemical": "MgSO4",
+        "comment": ""
+      }
+    },
+    {
+      "name": "cartridge_silica-gel",
+      "properties": {
+        "id": "cartridge_silica-gel",
+        "component_type": "cartridge",
+        "chemical": "silica-gel",
+        "comment": ""
+      }
+    },
+    {
+      "name": "reactor",
+      "properties": {
+        "id": "reactor",
+        "component_type": "reactor",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "rotavap",
+      "properties": {
+        "id": "rotavap",
+        "component_type": "rotavap",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "separator",
+      "properties": {
+        "id": "separator",
+        "component_type": "separator",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "product",
+      "properties": {
+        "id": "product",
+        "component_type": "flask",
+        "chemical": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<XDL>
+<Synthesis>
+    <Hardware>
+        <Component
+            id="reactor"
+            type="reactor" />
+        <Component
+            id="rotavap"
+            type="rotavap" />
+        <Component
+            id="DIAD_vial"
+            type="flask"
+            chemical="DIAD" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="Z-Hyp-OH" molecular_weight="265.26 g/mol" solid="true" role="reagent"/>
+        <Reagent name="PPh3" molecular_weight="262.29 g/mol" solid="true" role="reagent"/>
+        <Reagent name="DIAD" molecular_weight="202.21 g/mol" solid="true" role="reagent"/>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+        <Reagent name="diethyl ether" molecular_weight="74.12 g/mol" density="0.706 g/mL" role="solvent"/>
+        <Reagent name="methanol" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <!-- MAPPING OF INTERNAL BLUEPRINT PARAMETERS AT BOTTOM (TEMP AND TIME) -->
+        <Cyclic_Mitsunobu_Recursive_Split
+            reagent="Z-Hyp-OH"
+            phosphine="PPh3"
+            azodicarboxylate="DIAD"
+            azodicarboxylate_vial="DIAD_vial"
+            reaction_solvent="THF"
+            precipitate_solvent="diethyl ether"
+            reactor="reactor"
+            equiv_reference="reagent"
+            equiv_amount="3.5 mmol"
+            reaction_time="8 h"
+            reaction_temp="25 °C"
+        />
+        <Transfer
+            from_vessel="reactor"
+            to_vessel="rotavap"
+            volume="all"
+            rinsing_volume="20 mL"
+            rinsing_repeats="3"
+            rinse_withdrawal_excess="0.0" />
+        <ResetHandling
+            solvent="diethyl ether" />
+        <Evaporate
+            vessel="rotavap"
+            time="30 min" />
+        <Dry
+            vessel="rotavap"
+            time="30 min" />
+        <ResetHandling
+            solvent="methanol" />
+
+        <Repeat repeats="2">
+            <Add
+                vessel="reactor"
+                reagent="THF"
+                amount="1 mL"
+            />
+        </Repeat>
+    </Procedure>
+</Synthesis>
+</XDL>

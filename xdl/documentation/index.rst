@@ -7,16 +7,16 @@
 XDL documentation
 =================
 
-Usage
-*****
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
 
    install
    usage/index
+   standard/index
    development/index
-   xdl_autodoc/modules
+   src/modules
+   old_standard/index
 
 
 

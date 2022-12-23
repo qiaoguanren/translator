@@ -1,0 +1,61 @@
+<XDL>
+<Synthesis>
+    <Hardware>
+        <Component
+            id="reactor"
+            type="reactor" />
+        <Component
+            id="rotavap"
+            type="rotavap" />
+        <Component
+            id="DIAD_vial"
+            type="flask"
+            chemical="DIAD" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="Z-Hyp-OH" molecular_weight="265.26 g/mol" solid="true" role="reagent"/>
+        <Reagent name="PPh3" molecular_weight="262.29 g/mol" solid="true" role="reagent"/>
+        <Reagent name="DIAD" molecular_weight="202.21 g/mol" solid="true" role="reagent"/>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+        <Reagent name="diethyl ether" molecular_weight="74.12 g/mol" density="0.706 g/mL" role="solvent"/>
+        <Reagent name="methanol" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+    <Cyclic_Mitsunobu_Split
+        reagent="Z-Hyp-OH"
+        phosphine="PPh3"
+        azodicarboxylate="DIAD"
+        azodicarboxylate_vial="DIAD_vial"
+        reaction_solvent="THF"
+        precipitate_solvent="diethyl ether"
+        reactor="reactor"
+        equiv_reference="reagent"
+        equiv_amount="3.5 mmol" />
+    <Transfer
+        from_vessel="reactor"
+        to_vessel="rotavap"
+        volume="all"
+        rinsing_volume="20 mL"
+        rinsing_repeats="3"
+        rinse_withdrawal_excess="0.0" />
+    <ResetHandling
+        solvent="diethyl ether" />
+    <Evaporate
+        vessel="rotavap"
+        time="30 min" />
+    <Dry
+        vessel="rotavap"
+        time="30 min" />
+    <ResetHandling
+        solvent="methanol" />
+    <Repeat repeats="2">
+        <Single_Add_Split
+            reactor_vessel="reactor"
+            addition_reagent="THF"
+        />
+    </Repeat>
+    </Procedure>
+</Synthesis>
+</XDL>

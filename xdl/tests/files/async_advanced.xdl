@@ -1,0 +1,208 @@
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="reactor1"
+      type="reactor"
+    />
+    <Component
+      id="reactor2"
+      type="reactor"
+    />
+    <Component
+      id="reactor3"
+      type="reactor"
+    />
+    <Component
+      id="reactor4"
+      type="reactor"
+    />
+    <Component
+      id="waste1"
+      type="flask"
+    />
+    <Component
+      id="waste2"
+      type="flask"
+    />
+    <Component
+      id="waste3"
+      type="flask"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="water1"
+    />
+    <Reagent
+      name="water2"
+    />
+    <Reagent
+      name="water3"
+    />
+    <Reagent
+      name="water4"
+    />
+    <Reagent
+      name="water5"
+    />
+    <Reagent
+      name="water6"
+    />
+    <Reagent
+      name="water7"
+    />
+    <Reagent
+      name="water8"
+    />
+  </Reagents>
+
+  <Procedure>
+    <Repeat
+      repeats="2"
+    >
+      <Add
+        vessel="reactor1"
+        reagent="water1"
+        volume="10 mL"
+      />
+      <Add
+        vessel="reactor1"
+        reagent="water2"
+        volume="10 mL"
+        stir="True"
+      />
+      <Add
+        vessel="reactor1"
+        reagent="water3"
+        volume="10 mL"
+        stir="True"
+      />
+      <Async
+        pid="reaction1"
+      >
+        <HeatChill
+          vessel="reactor1"
+          temp="50°C"
+          time="3 hrs"
+          stir="true"
+        />
+      </Async>
+      <Add
+        vessel="reactor2"
+        reagent="water4"
+        volume="10 mL"
+      />
+      <Add
+        vessel="reactor2"
+        reagent="water5"
+        volume="10 mL"
+        stir="True"
+      />
+      <Add
+        vessel="reactor2"
+        reagent="water6"
+        volume="10 mL"
+        stir="True"
+      />
+      <Async
+        pid="reaction2"
+      >
+        <HeatChill
+          vessel="reactor2"
+          temp="60°C"
+          time="3 hrs"
+          stir="true"
+        />
+      </Async>
+      <Add
+        vessel="reactor3"
+        reagent="water7"
+        volume="10 mL"
+      />
+      <Add
+        vessel="reactor3"
+        reagent="water8"
+        volume="10 mL"
+        stir="True"
+      />
+      <Add
+        vessel="reactor3"
+        reagent="water1"
+        volume="10 mL"
+        stir="True"
+      />
+      <Async
+        pid="reaction3"
+      >
+        <HeatChill
+          vessel="reactor3"
+          temp="70°C"
+          time="3 hrs"
+          stir="true"
+        />
+      </Async>
+      <Add
+        vessel="reactor4"
+        reagent="water2"
+        volume="10 mL"
+      />
+      <Add
+        vessel="reactor4"
+        reagent="water3"
+        volume="10 mL"
+        stir="True"
+      />
+      <Add
+        vessel="reactor4"
+        reagent="water4"
+        volume="10 mL"
+        stir="True"
+      />
+      <Async
+        pid="reaction4"
+      >
+        <HeatChill
+          vessel="reactor4"
+          temp="80°C"
+          time="3 hrs"
+          stir="true"
+        />
+      </Async>
+      <Await
+        pid="reaction1"
+      />
+      <Transfer
+        from_vessel="reactor1"
+        to_vessel="waste1"
+        volume="30 mL"
+      />
+      <Await
+        pid="reaction2"
+      />
+      <Transfer
+        from_vessel="reactor2"
+        to_vessel="waste2"
+        volume="30 mL"
+      />
+      <Await
+        pid="reaction3"
+      />
+      <Transfer
+        from_vessel="reactor3"
+        to_vessel="waste1"
+        volume="30 mL"
+      />
+      <Await
+        pid="reaction4"
+      />
+      <Transfer
+        from_vessel="reactor4"
+        to_vessel="waste3"
+        volume="30 mL"
+      />
+    </Repeat>
+  </Procedure>
+
+</Synthesis>

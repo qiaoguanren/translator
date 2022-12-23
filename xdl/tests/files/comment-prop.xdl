@@ -1,0 +1,22 @@
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="reactor"
+      type="reactor"
+    />
+  </Hardware>
+
+  <Reagents>
+  </Reagents>
+
+  <Procedure>
+    <HeatChillToTemp
+      vessel="reactor"
+      temp="100 °C"
+      stir="true"
+      comment="this is a comment"
+    />
+  </Procedure>
+
+</Synthesis>

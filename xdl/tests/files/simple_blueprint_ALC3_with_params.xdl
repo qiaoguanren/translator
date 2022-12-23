@@ -1,0 +1,104 @@
+<XDL>
+<Blueprint id="Add_Solid">
+    <Hardware>
+        <Component id="reactor_1" type="reactor"/>
+        <Component id="reactor_2" type="reactor"/>
+        <Component id="reactor_3" type="reactor"/>
+    </Hardware>
+
+    <Parameters>
+        <Parameter id="wait_time" type="time" value="10 seconds"/>
+    </Parameters>
+
+    <Reagents>
+        <Reagent id="solid"/>
+    </Reagents>
+
+    <Procedure>
+        <Add reagent="solid" vessel="reactor_1" amount="1 eq"/>
+        <Add reagent="solid" vessel="reactor_2" amount="0.5 eq"/>
+        <Add reagent="solid" vessel="reactor_3" amount="1.5 eq"/>
+        <Wait time="wait_time"/>
+    </Procedure>
+</Blueprint>
+
+<Blueprint id="Add_Liquids">
+    <Hardware>
+        <Component id="reactor_1" type="reactor"/>
+        <Component id="reactor_2" type="reactor"/>
+    </Hardware>
+
+    <Parameters>
+        <Parameter id="wait_time" type="time" value="3 min"/>
+    </Parameters>
+
+    <Reagents>
+        <Reagent id="liquid_1"/>
+        <Reagent id="liquid_2"/>
+    </Reagents>
+
+    <Procedure>
+        <Add reagent="liquid_1" vessel="reactor_1" amount="2 mL"/>
+        <Add reagent="liquid_2" vessel="reactor_2" amount="2.6 mL"/>
+        <Add reagent="liquid_1" vessel="reactor_1" amount="1 mL"/>
+        <Wait time="wait_time"/>
+    </Procedure>
+</Blueprint>
+
+<Blueprint id="Transfer_Liquids">
+    <Hardware>
+        <Component id="reactor_1" type="reactor"/>
+        <Component id="reactor_2" type="reactor"/>
+        <Component id="reactor_3" type="reactor"/>
+    </Hardware>
+
+    <Procedure>
+        <CMove from_vessel="reactor_1" to_vessel="reactor_3" volume="1 mL"/>
+        <CMove from_vessel="reactor_2" to_vessel="reactor_3" volume="1 mL"/>
+        <Add reagent="water" vessel="reactor_1" volume="1 mL"/>
+        <Add reagent="water" vessel="reactor_2" volume="1 mL"/>
+        <Add reagent="water" vessel="reactor_3" volume="1 mL"/>
+        <CMove from_vessel="reactor_3" to_vessel="reactor_1" volume="1 mL"/>
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+        <Component id="reactor_01" type="reactor"/>
+        <Component id="reactor_02" type="reactor"/>
+        <Component id="reactor_03" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="water" molecular_weight="18.0153 g/mol" density="1 g/mL"/>
+        <Reagent name="acetonitrile_water" concentration="2.6 mol/L" density="0.7822 g/mL"/>
+        <Reagent name="histidine" solid="true" molecular_weight="155.155 g/mol"/>
+    </Reagents>
+
+    <Procedure>
+        <Add_Solid
+            solid="histidine"
+            reactor_1="reactor_01"
+            reactor_2="reactor_02"
+            reactor_3="reactor_03"
+            equiv_reference="solid"
+            equiv_amount="0.5 g"
+        />
+        <Add_Liquids
+            liquid_1="water"
+            liquid_2="acetonitrile_water"
+            reactor_1="reactor_01"
+            reactor_2="reactor_02"
+        />
+        <Transfer_Liquids
+            reactor_1="reactor_01"
+            reactor_2="reactor_02"
+            reactor_3="reactor_03"
+        />
+        <Add
+            amount="2 eq"
+            reagent="water"
+            vessel="reactor_01"/>
+    </Procedure>
+</Synthesis>
+</XDL>

@@ -48,22 +48,22 @@ Example
 
         # Define any properties to be given if 'default' given as value.
         DEFAULT_PROPS = {
-            'solvent_volume': '50 mL',
-            'stir_time': '1 min'
+            "solvent_volume": "50 mL",
+            "stir_time": "1 min",
         }
 
         # Types of all properties
         PROP_TYPES = {
-            'from_vessel': str,
-            'to_vessel': str,
-            'solvent': str,
-            'solvent_volume': float,
-            'stir_time': float,
+            "from_vessel": str,
+            "to_vessel": str,
+            "solvent": str,
+            "solvent_volume": float,
+            "stir_time": float,
         }
 
         PROP_LIMITS = {
-            'solvent_volume': VOLUME_PROP_LIMIT,
-            'stir_time': TIME_PROP_LIMIT,
+            "solvent_volume": VOLUME_PROP_LIMIT,
+            "stir_time": TIME_PROP_LIMIT,
         }
 
         INTERNAL_PROPS = []
@@ -74,8 +74,8 @@ Example
             from_vessel: str,
             to_vessel: str,
             solvent: str,
-            solvent_volume: float = 'default',
-            stir_time: float = 'default',
+            solvent_volume: float = "default",
+            stir_time: float = "default",
             **kwargs
         ):
             # Super call converts all args to standard units / types and creates
@@ -93,19 +93,19 @@ Example
             return [
                 SanityCheck(
                     condition=self.from_vessel,
-                    error_msg='No from_vessel given'
+                    error_msg="No from_vessel given",
                 ),
                 SanityCheck(
                     condition=self.to_vessel,
-                    error_msg='No to_vessel given'
+                    error_msg="No to_vessel given",
                 ),
                 SanityCheck(
                     condition=self.solvent,
-                    error_msg='No solvent given',
+                    error_msg="No solvent given",
                 ),
                 SanityCheck(
                     condition=self.solvent_volume > 0,
-                    error_msg='Solvent volume must be > 0',
+                    error_msg="Solvent volume must be > 0",
                 ),
             ]
 
@@ -116,22 +116,19 @@ Example
                 Transfer(
                     to_vessel=self.to_vessel,
                     to_vessel=self.to_vessel,
-                    volume='all',
+                    volume="all",
                 ),
-
                 # Add solvent to source flask.
                 Add(
                     vessel=self.to_vessel,
                     reagent=self.solvent,
                     volume=self.solvent_volume,
                 ),
-
                 # Stir solvent in source flask.
                 Stir(
                     vessel=self.vessel,
                     time=self.stir_time,
                 ),
-
                 # Transfer solvent / washings to target flask.
                 Transfer(
                     to_vessel=self.to_vessel,

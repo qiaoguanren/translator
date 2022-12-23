@@ -1,0 +1,136 @@
+<XDL>
+<Blueprint id="Cyclic_Mitsunobu">
+    <Hardware>
+        <Component id="reactor" type="reactor"/>
+        <Component id="azodicarboxylate_vial" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent id="reagent"/>
+        <Reagent id="phosphine"/>
+        <Reagent id="azodicarboxylate"/>
+        <Reagent id="reaction_solvent"/>
+        <Reagent id="precipitate_solvent"/>
+    </Reagents>
+
+    <Parameters>
+        <Parameter id="reaction_time" type="time" value="8 h"/>
+        <Parameter id="reaction_temp" type="temp" value="25 °C"/>
+    </Parameters>
+
+    <!-- BASE SCALE refers to scale in which procedure has been developed /
+    scale in which solvent volumes etc. have been determined -->
+    <Procedure base_scale="0.05 mol/eq">
+
+        <!-- SCALED AMOUNT -->
+        <Add reagent="phosphine" vessel="reactor" amount="20 mg /eq"/>
+        <Add reagent="reagent" vessel="reactor" amount="1 eq"/>
+
+        <Dissolve
+            vessel="reactor"
+            solvent="reaction_solvent"
+            amount="5 mL/eq"
+            time="60 s"/>
+
+        <!-- SCALED VOLUME -->
+        <Dissolve
+            vessel="azodicarboxylate_vial"
+            solvent="THF"
+            amount="2 mL / eq"
+            time="60 s" />
+
+        <HeatChillToTemp vessel="reactor" temp="0 °C" stir="True" />
+        <Transfer
+            from_vessel="azodicarboxylate_vial"
+            to_vessel="reactor"
+            amount="6 mL / eq"
+            time="10 min"
+            rinsing_volume="1 mL"
+            rinsing_repeats="3"
+            rinse_withdrawal_excess="0.0" />
+
+        <ResetHandling
+            solvent="reaction_solvent" />
+        <ResetHandling
+            solvent="precipitate_solvent" />
+
+        <HeatChill
+            vessel="reactor"
+            param.temp="reaction_temp"
+            param.time="reaction_time"
+            stir="True" />
+        <Evaporate
+            vessel="reactor"
+            temp="45 °C"
+            time="1 h"
+            pressure="50 mbar"
+            mode="auto" />
+        <Precipitate
+            vessel="reactor"
+            reagent="diethyl ether"
+            amount="10 mL/eq" />
+
+        <Dissolve
+            vessel="reactor"
+            solvent="precipitate_solvent"
+            amount="0.02 L / eq"
+            time="5 min" />
+
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+        <Component
+            id="reactor"
+            type="reactor" />
+        <Component
+            id="rotavap"
+            type="rotavap" />
+        <Component
+            id="DIAD_vial"
+            type="flask"
+            chemical="DIAD" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="Z-Hyp-OH" molecular_weight="265.26 g/mol" solid="true" role="reagent"/>
+        <Reagent name="PPh3" molecular_weight="262.29 g/mol" solid="true" role="reagent"/>
+        <Reagent name="DIAD" molecular_weight="202.21 g/mol" solid="true" role="reagent"/>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+        <Reagent name="diethyl ether" molecular_weight="74.12 g/mol" density="0.706 g/mL" role="solvent"/>
+        <Reagent name="methanol"/>
+    </Reagents>
+
+    <Procedure>
+        <Cyclic_Mitsunobu
+            reagent="Z-Hyp-OH"
+            phosphine="PPh3"
+            azodicarboxylate="DIAD"
+            azodicarboxylate_vial="DIAD_vial"
+            reaction_solvent="THF"
+            precipitate_solvent="diethyl ether"
+            reactor="reactor"
+            equiv_reference="phosphine"
+            equiv_amount="3.5 mmol"
+            />
+        <Transfer
+            from_vessel="reactor"
+            to_vessel="rotavap"
+            volume="all"
+            rinsing_volume="20 mL"
+            rinsing_repeats="3"
+            rinse_withdrawal_excess="0.0" />
+        <ResetHandling
+            solvent="diethyl ether" />
+        <Evaporate
+            vessel="rotavap"
+            time="30 min" />
+        <Dry
+            vessel="rotavap"
+            time="30 min" />
+        <ResetHandling
+            solvent="methanol" />
+    </Procedure>
+</Synthesis>
+</XDL>

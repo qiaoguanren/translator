@@ -1,0 +1,29 @@
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="reactor"
+      type="reactor"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="ethyl acetate"
+    />
+  </Reagents>
+
+  <Procedure>
+
+    <Repeat repeats="0">
+      <Add
+        reagent="ethyl acetate"
+        vessel="reactor"
+        volume="60 mL"
+        priming_volume="0 mL"
+        prime_n_times="0"
+      />
+    </Repeat>
+  </Procedure>
+
+</Synthesis>

@@ -28,44 +28,46 @@ tutorial.
     from ..utils import generic_chempiler_test
 
     HERE = os.path.abspath(os.path.dirname(__file__))
-    FOLDER = os.path.join(HERE, '..', 'files')
+    FOLDER = os.path.join(HERE, "..", "files")
 
     # This decorator must be used for the test to be picked up by the CI.
+
+
     @pytest.mark.unit
     def test_quantitative_transfer():
         """Test QuantitativeTransfer step."""
         # Instantiate XDL object from test XDL file and generic `bigrig.json` graph.
-        xdl_f = os.path.join(FOLDER, 'quantitative_transfer.xdl')
-        graph_f = os.path.join(FOLDER, 'bigrig.json')
-        x = XDL(xdl_f)
+        xdl_f = os.path.join(FOLDER, "quantitative_transfer.xdl")
+        graph_f = os.path.join(FOLDER, "bigrig.json")
+        x = XDL(xdl_f, platform=ChemputerPlatform)
         x.prepare_for_execution(graph_f)
 
         # Test that steps are as expected.
         for step in x.steps:
-            if step.name == 'QuantitativeTransfer':
+            if step.name == "QuantitativeTransfer":
                 substeps = step.steps
 
                 assert len(substeps) == 3
 
                 # Initial liquid transfer
-                assert substeps[0].name == 'Transfer'
+                assert substeps[0].name == "Transfer"
                 assert substeps[0].from_vessel == step.from_vessel
                 assert substeps[0].to_vessel == step.to_vessel
-                assert substeps[0].volume == 'all'
+                assert substeps[0].volume == "all"
 
                 # Adding solvent
-                assert substeps[1].name == 'Add'
+                assert substeps[1].name == "Add"
                 assert substeps[1].reagent == step.solvent
                 assert substeps[1].vessel == step.from_vessel
                 assert substeps[1].volume == step.solvent_volume
 
                 # Stir solvent
-                assert substeps[2].name == 'Stir'
+                assert substeps[2].name == "Stir"
                 assert substeps[2].vessel == step.from_vessel
                 assert substeps[2].time == step.stir_time
 
                 # Transfer solvent
-                assert substeps[3].name == 'Transfer'
+                assert substeps[3].name == "Transfer"
                 assert substeps[3].from_vessel == step.from_vessel
                 assert substeps[3].to_vessel == step.to_vessel
                 assert substeps[3].volume == step.solvent_volume

@@ -8,4 +8,3 @@ Development
    testing_new_step
    making_dynamic_step
    xdl_base
-   platforms

@@ -1,0 +1,54 @@
+<XDL>
+
+<Blueprint id="Test_Repeat">
+
+    <Hardware>
+        <Component
+            id="reactor" type="reactor" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <Add reagent="THF" vessel="reactor" amount="0.5 mL"/>
+        <Repeat>
+            <Add reagent="THF" vessel="reactor" amount="1 mL"/>
+            <MockMeasure target_repeats="3"/>
+        </Repeat>
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+
+    <Hardware>
+        <Component
+            id="reactor" type="reactor" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <Wait
+          time="5 secs"
+        />
+        <Add reagent="THF" vessel="reactor" amount="0.5 mL"/>
+
+        <Test_Repeat reactor='reactor'/>
+
+        <Repeat>
+            <Add reagent="THF" vessel="reactor" amount="1 mL"/>
+            <MockMeasure target_repeats="5"/>
+        </Repeat>
+        <Add reagent="THF" vessel="reactor" amount="1.5 mL"/>
+        <Wait
+          time="10 secs"
+        />
+
+
+    </Procedure>
+</Synthesis>
+</XDL>

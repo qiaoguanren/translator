@@ -1,0 +1,374 @@
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="jacketed_filter"
+      type="filter"
+    />
+    <Component
+      id="rotavap"
+      type="rotavap"
+    />
+    <Component
+      id="buffer_flask"
+      type="flask"
+    />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="2_6_diisopropylaniline"
+    />
+    <Reagent
+      name="HOAc"
+    />
+    <Reagent
+      name="MeOH"
+    />
+    <Reagent
+      name="glyoxal_solution"
+    />
+    <Reagent
+      name="paraformaldehyde"
+    />
+    <Reagent
+      name="substrate"
+    />
+    <Reagent
+      name="TMSCl_solution"
+    />
+    <Reagent
+      name="EtOAc"
+    />
+    <Reagent
+      name="KOtBu_solution"
+    />
+    <Reagent
+      name="HCE_solution"
+    />
+    <Reagent
+      name="THF"
+    />
+    <Reagent
+      name="toluene"
+    />
+    <Reagent
+      name="DCM"
+    />
+    <Reagent
+      name="substrateS3"
+    />
+    <Reagent
+      name="KF"
+    />
+    <Reagent
+      name="KBF4"
+    />
+    <Reagent
+      name="acetonitrile"
+    />
+    <Reagent
+      name="ether"
+    />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      vessel="jacketed_filter"
+      reagent="MeOH"
+      volume="250mL"
+      stir="True"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="2_6_diisopropylaniline"
+      volume="210mL"
+      stir="true"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="HOAc"
+      volume="1mL"
+      stir="true"
+    />
+    <HeatChillToTemp
+      vessel="jacketed_filter"
+      temp="50 °C"
+      stir="true"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="glyoxal_solution"
+      volume="all"
+      stir="true"
+      stir_speed="500 RPM"
+    />
+    <Stir
+      vessel="jacketed_filter"
+      time="15min"
+      stir_speed="500 RPM"
+    />
+    <HeatChill
+      vessel="jacketed_filter"
+      temp="23 °C"
+      time="10h"
+      stir="true"
+    />
+    <Filter
+      vessel="jacketed_filter"
+    />
+    <WashSolid
+      vessel="jacketed_filter"
+      solvent="MeOH"
+      volume="100mL"
+      vacuum_time="1min"
+      stir="solvent"
+      time="5min"
+      stir_speed="800 RPM"
+      repeats="3"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="EtOAc"
+      volume="5.4L"
+      stir="True"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="TMSCl_solution"
+      volume="100 mL"
+      time="45min"
+      stir="True"
+      stir_speed="500 RPM"
+    />
+    <HeatChill
+      vessel="jacketed_filter"
+      temp="70 °C"
+      time="2h"
+      stir="true"
+      stir_speed="400 RPM"
+    />
+    <HeatChillToTemp
+      vessel="jacketed_filter"
+      temp="10 °C"
+      stir="True"
+      stir_speed="400 RPM"
+    />
+    <Stir
+      vessel="jacketed_filter"
+      time="1h"
+    />
+    <Filter
+      vessel="jacketed_filter"
+    />
+    <WashSolid
+      vessel="jacketed_filter"
+      solvent="EtOAc"
+      volume="500mL"
+      time="15min"
+      repeats="3"
+    />
+    <Dry
+      vessel="jacketed_filter"
+      time="2h"
+    />
+    <StopHeatChill
+      vessel="jacketed_filter"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="THF"
+      volume="700mL"
+      stir="True"
+    />
+    <HeatChillToTemp
+      vessel="jacketed_filter"
+      temp="23 °C"
+      stir="True"
+      stir_speed="400 RPM"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="KOtBu_solution"
+      volume="423mL"
+      stir="True"
+      speed="5"
+    />
+    <HeatChill
+      vessel="jacketed_filter"
+      temp="23 °C"
+      time="4h"
+      stir="true"
+      stir_speed="400 RPM"
+    />
+    <HeatChillToTemp
+      vessel="jacketed_filter"
+      temp="-40 °C"
+      stir="True"
+      stir_speed="400 RPM"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="HCE_solution"
+      volume="423ml"
+      stir="True"
+      stir_speed="500 RPM"
+      speed="1"
+    />
+    <HeatChill
+      vessel="jacketed_filter"
+      temp="23 °C"
+      time="24h"
+      stir="True"
+      stir_speed="300 RPM"
+    />
+    <HeatChillToTemp
+      vessel="jacketed_filter"
+      temp="-40 °C"
+      stir="True"
+      stir_speed="400 RPM"
+    />
+    <Stir
+      vessel="jacketed_filter"
+      time="30min"
+    />
+    <Filter
+      vessel="jacketed_filter"
+    />
+    <WashSolid
+      vessel="jacketed_filter"
+      solvent="THF"
+      volume="100mL"
+      vacuum_time="5 min"
+      stir="solvent"
+      time="5min"
+      stir_speed="700 RPM"
+      repeats="3"
+    />
+    <WashSolid
+      vessel="jacketed_filter"
+      solvent="toluene"
+      volume="100ml"
+      stir="solvent"
+      time="5min"
+      repeats="6"
+    />
+    <HeatChillReturnToRT
+      vessel="jacketed_filter"
+      stir="False"
+    />
+    <Dry
+      vessel="jacketed_filter"
+    />
+    <Dissolve
+      vessel="jacketed_filter"
+      solvent="DCM"
+      volume="500ml"
+    />
+    <FilterThrough
+      from_vessel="jacketed_filter"
+      to_vessel="rotavap"
+      eluting_solvent="DCM"
+      eluting_volume="50ml"
+      eluting_repeats="3"
+    />
+    <Evaporate
+      vessel="rotavap"
+      temp="40 °C"
+      pressure="750 mbar"
+      time="1h"
+    />
+    <Dry
+      vessel="rotavap"
+      temp="23 °C"
+      pressure="50mbar"
+    />
+    <Dry
+      vessel="jacketed_filter"
+      temp="50 °C"
+      pressure="50mbar"
+    />
+    <Dry
+      vessel="jacketed_filter"
+      time="2h"
+      temp="40 °C"
+      pressure="50mbar"
+    />
+    <Add
+      vessel="jacketed_filter"
+      reagent="acetonitrile"
+      volume="200mL"
+      stir="True"
+    />
+    <Dissolve
+      vessel="rotavap"
+      solvent="acetonitrile"
+      volume="100ml"
+      time="10min"
+      stir_speed="250 RPM"
+    />
+    <Transfer
+      from_vessel="rotavap"
+      to_vessel="jacketed_filter"
+      volume="all"
+      from_port="evaporate"
+      to_port="top"
+    />
+    <HeatChill
+      vessel="jacketed_filter"
+      temp="80 °C"
+      time="16h"
+      stir="True"
+      stir_speed="500 RPM"
+    />
+    <HeatChillReturnToRT
+      vessel="jacketed_filter"
+    />
+    <FilterThrough
+      from_vessel="jacketed_filter"
+      to_vessel="rotavap"
+      eluting_solvent="DCM"
+      eluting_volume="25ml"
+      eluting_repeats="3"
+    />
+    <Evaporate
+      vessel="rotavap"
+      temp="40 °C"
+      pressure="200 mbar"
+      time="1h"
+    />
+    <Dissolve
+      vessel="rotavap"
+      solvent="DCM"
+      volume="200ml"
+      time="10min"
+      stir_speed="250 RPM"
+    />
+    <FilterThrough
+      from_vessel="rotavap"
+      to_vessel="buffer_flask"
+      eluting_solvent="DCM"
+      eluting_volume="25ml"
+      eluting_repeats="3"
+    />
+    <Transfer
+      from_vessel="buffer_flask"
+      to_vessel="rotavap"
+      volume="all"
+    />
+    <WashSolid
+      vessel="rotavap"
+      solvent="ether"
+      volume="15ml"
+      time="10min"
+      stir_speed="250 RPM"
+      repeats="3"
+    />
+    <Dry
+      vessel="rotavap"
+      temp="23 °C"
+      pressure="100mbar"
+    />
+  </Procedure>
+
+</Synthesis>

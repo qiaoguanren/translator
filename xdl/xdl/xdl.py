@@ -512,12 +512,12 @@ class XDL(object):
                 save_path = self._xdl_file.replace('.xdl', '.xdlexe')
 
             # Compile procedure
-            self.executor.prepare_for_execution(
-                graph_file,
-                interactive=interactive,
-                sanity_check=sanity_check,
-                **kwargs
-            )
+            # self.executor.prepare_for_execution(
+            #     graph_file,
+            #     interactive=interactive,
+            #     sanity_check=sanity_check,
+            #     **kwargs
+            # )
 
             # Save XDLEXE, switch self.compiled flag to True, and log reagent
             # volumes consumed by procedure and estimated duration.

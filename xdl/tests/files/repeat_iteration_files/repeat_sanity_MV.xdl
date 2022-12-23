@@ -1,0 +1,26 @@
+<XDL>
+
+<Synthesis>
+
+      <Hardware>
+         <Component id='reactor' type='reactor'/>
+      </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="water"
+      role="substrate" />
+    <Reagent
+      name="ether"
+      role="substrate" />
+  </Reagents>
+
+  <Procedure>
+    <Repeat repeats="3" rx.role='substrate'>
+      <MockMeasure/>
+      <Add reagent='rx' vessel='reactor' amount='5 mL'/>
+    </Repeat>
+  </Procedure>
+
+</Synthesis>
+</XDL>

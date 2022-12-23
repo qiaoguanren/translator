@@ -1,0 +1,42 @@
+<XDL>
+<Blueprint id="Test">
+    <Hardware>
+      <Component id='reactor' type='reactor' />
+    </Hardware>
+
+    <Reagents>
+        <Reagent id="reagent" />
+    </Reagents>
+
+    <Procedure>
+      <Async>
+          <Add
+            vessel='reactor'
+            reagent='reagent'
+            amount='1 mmol'
+          />
+      </Async>
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+      <Component id="reactor" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="3,5-bis(trifluoromethyl)bromobenzene" molecular_weight="293 g/mol" density='1 g/ml' role="reagent"/>
+      </Reagents>
+
+    <Parameters>
+    </Parameters>
+
+    <Procedure>
+      <Test
+        reactor='reactor'
+        reagent='3,5-bis(trifluoromethyl)bromobenzene'
+      />
+    </Procedure>
+
+</Synthesis>
+</XDL>
