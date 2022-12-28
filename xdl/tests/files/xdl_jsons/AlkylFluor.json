@@ -1,0 +1,1459 @@
+{
+  "metadata": {},
+  "steps": [
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "MeOH",
+        "volume": "250 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "c0ce0921-94f5-45bf-9c5f-055d8ccdc9d0",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "2_6_diisopropylaniline",
+        "volume": "210 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "7000b786-1559-4c73-93ca-3e9491ac4433",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "HOAc",
+        "volume": "1 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "990e1c3b-685b-4a6d-bc7e-af2f92db11fd",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "50 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "5273b458-f510-4e1e-9615-240d7a5015eb",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "glyoxal_solution",
+        "volume": "all",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "932d2fcc-efe8-4518-9629-c4e640e84beb",
+      "section": "no_section"
+    },
+    {
+      "name": "Stir",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "time": "15 min",
+        "continue_stirring": "False",
+        "stir_speed": "500 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "077a05b4-11e6-4e10-89c2-f396932da410",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "23 \u00b0C",
+        "time": "10 h",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "95f482af-4ed5-4354-a825-21be2fa85606",
+      "section": "no_section"
+    },
+    {
+      "name": "Filter",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "wait_time": "2 min",
+        "aspiration_speed": "5.0",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "temp": null,
+        "volume": null,
+        "continue_heatchill": "False",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "2bd5fa3f-4e35-45f5-af29-ea6450294810",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "solvent": "MeOH",
+        "volume": "100 mL",
+        "temp": null,
+        "vacuum_time": "60 s",
+        "stir": "solvent",
+        "time": "5 min",
+        "stir_speed": "800 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "3",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "9b855980-5c1e-415d-9431-2e4d7a22d066",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "EtOAc",
+        "volume": "5.4 l",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "e9074f2f-cea6-4968-9f15-fb9a4bf9f660",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "TMSCl_solution",
+        "volume": "100 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": "45 min",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "3979552a-7e6a-4603-9bb8-4ed62b824a0d",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "70 \u00b0C",
+        "time": "2 h",
+        "stir": "True",
+        "stir_speed": "400 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "0fcae04d-55f3-4823-abd4-931b94b6d533",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "10 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "400 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "e9ded505-d5aa-4a29-b10f-8e4c1dd6ee62",
+      "section": "no_section"
+    },
+    {
+      "name": "Stir",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "time": "60 min",
+        "continue_stirring": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "ce981581-085c-434f-9182-33e242c71e68",
+      "section": "no_section"
+    },
+    {
+      "name": "Filter",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "wait_time": "2 min",
+        "aspiration_speed": "5.0",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "temp": null,
+        "volume": null,
+        "continue_heatchill": "False",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "de1bd572-45ed-4a4b-a674-089365d213f3",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "solvent": "EtOAc",
+        "volume": "500 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "True",
+        "time": "15 min",
+        "stir_speed": "500 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "3",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "db48dfdf-49dc-40d8-9caa-0e0d3407ca68",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "time": "2 h",
+        "temp": null,
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "ad25c914-269e-45d2-8014-b0dd03aed974",
+      "section": "no_section"
+    },
+    {
+      "name": "StopHeatChill",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "627274d6-2465-462e-96ed-d08c8fbb06b2",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "THF",
+        "volume": "700 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "22b25f0e-1bef-4937-b712-2787685162fd",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "23 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "400 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "f6d3be17-1611-4277-81c6-761d5a27e11b",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "KOtBu_solution",
+        "volume": "423 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "5.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "d6212d33-6004-4320-b4cc-fd974f89ab8b",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "23 \u00b0C",
+        "time": "4 h",
+        "stir": "True",
+        "stir_speed": "400 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "de51729e-58f8-4eaa-a413-040770554fe8",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "-40 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "400 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "7d7c07a2-f7db-434a-9889-390dc312a47f",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "HCE_solution",
+        "volume": "423 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "1.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "beb2be41-6416-43e6-9d5a-0c8a63de7d9b",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "23 \u00b0C",
+        "time": "24 h",
+        "stir": "True",
+        "stir_speed": "300 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "5ae811ee-8cf7-4974-851a-14490e147ed8",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "-40 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "400 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "53ddaca4-e585-4619-a166-e64010a91074",
+      "section": "no_section"
+    },
+    {
+      "name": "Stir",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "time": "30 min",
+        "continue_stirring": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "8ed01640-1c77-4a78-8416-cd8b820cdb81",
+      "section": "no_section"
+    },
+    {
+      "name": "Filter",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "wait_time": "2 min",
+        "aspiration_speed": "5.0",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "temp": null,
+        "volume": null,
+        "continue_heatchill": "False",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "073f1b09-cfa0-4bdc-a8db-ea803b4189bc",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "solvent": "THF",
+        "volume": "100 mL",
+        "temp": null,
+        "vacuum_time": "5 min",
+        "stir": "solvent",
+        "time": "5 min",
+        "stir_speed": "700 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "3",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "04612a79-451f-44c3-8b4e-0551fb8a9c5d",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "solvent": "toluene",
+        "volume": "100 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "solvent",
+        "time": "5 min",
+        "stir_speed": "500 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "6",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "79753d03-bfa6-48dc-a230-764b2e4cdd9b",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillReturnToRT",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "9517136d-eccf-4b00-9f8e-6251a00fb4bd",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "time": "60 min",
+        "temp": null,
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "5fa81927-5314-415c-abfd-9dc1bd3a6c02",
+      "section": "no_section"
+    },
+    {
+      "name": "Dissolve",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "solvent": "DCM",
+        "volume": "500 mL",
+        "port": null,
+        "temp": "25 \u00b0C",
+        "time": "20 min",
+        "stir_speed": "400 RPM",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "9b2521a3-701a-48ca-80e4-b31a7ef00f9e",
+      "section": "no_section"
+    },
+    {
+      "name": "FilterThrough",
+      "properties": {
+        "from_vessel": "jacketed_filter",
+        "to_vessel": "rotavap",
+        "through": null,
+        "eluting_solvent": "DCM",
+        "eluting_volume": "50 mL",
+        "eluting_repeats": "3",
+        "residence_time": null,
+        "move_speed": "5.0",
+        "aspiration_speed": "5.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "de7d3465-a8cd-4de2-b104-939032af800f",
+      "section": "no_section"
+    },
+    {
+      "name": "Evaporate",
+      "properties": {
+        "vessel": "rotavap",
+        "temp": "40 \u00b0C",
+        "pressure": "750 mbar",
+        "time": "60 min",
+        "stir_speed": "150 RPM",
+        "mode": "manual",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "10f3870f-1de0-4bbe-8dd5-f323fbf3c185",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "rotavap",
+        "time": "60 min",
+        "temp": "23 \u00b0C",
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": "50 mbar",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "a5d0ae19-6afe-494d-81e6-a287d2a6fa5c",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "time": "60 min",
+        "temp": "50 \u00b0C",
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": "50 mbar",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "3986238e-c382-4ce2-81f0-d5097446a843",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "time": "2 h",
+        "temp": "40 \u00b0C",
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": "50 mbar",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "f2624ea6-cb9d-4977-928a-df4c6bd79db5",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "reagent": "acetonitrile",
+        "volume": "200 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "1bca00e7-f5ef-475d-9365-736a8840c6ff",
+      "section": "no_section"
+    },
+    {
+      "name": "Dissolve",
+      "properties": {
+        "vessel": "rotavap",
+        "solvent": "acetonitrile",
+        "volume": "100 mL",
+        "port": null,
+        "temp": "25 \u00b0C",
+        "time": "10 min",
+        "stir_speed": "250 RPM",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "a7a4247a-a05d-4922-9be4-19d324498008",
+      "section": "no_section"
+    },
+    {
+      "name": "Transfer",
+      "properties": {
+        "from_vessel": "rotavap",
+        "to_vessel": "jacketed_filter",
+        "volume": "all",
+        "from_port": "evaporate",
+        "to_port": "top",
+        "through": null,
+        "time": null,
+        "aspiration_speed": "10.0",
+        "move_speed": "40.0",
+        "dispense_speed": "40.0",
+        "viscous": "False",
+        "flush_tubing": "False",
+        "rinsing_solvent": null,
+        "rinsing_volume": null,
+        "rinsing_repeats": "1",
+        "rinse_withdrawal_excess": "0.2",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "aefdb0a2-69e8-4f22-91f5-364620a2d90f",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "temp": "80 \u00b0C",
+        "time": "16 h",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "14f2b2c0-af39-4025-8340-8f9e51016d8e",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillReturnToRT",
+      "properties": {
+        "vessel": "jacketed_filter",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "b6b1c429-5a57-4882-a596-46ce06a1fbcd",
+      "section": "no_section"
+    },
+    {
+      "name": "FilterThrough",
+      "properties": {
+        "from_vessel": "jacketed_filter",
+        "to_vessel": "rotavap",
+        "through": null,
+        "eluting_solvent": "DCM",
+        "eluting_volume": "25 mL",
+        "eluting_repeats": "3",
+        "residence_time": null,
+        "move_speed": "5.0",
+        "aspiration_speed": "5.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "508b81cd-e641-47fb-a88f-c371a1e75e90",
+      "section": "no_section"
+    },
+    {
+      "name": "Evaporate",
+      "properties": {
+        "vessel": "rotavap",
+        "temp": "40 \u00b0C",
+        "pressure": "200 mbar",
+        "time": "60 min",
+        "stir_speed": "150 RPM",
+        "mode": "manual",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "e154e6b8-a200-4fe1-83ff-862762699a7b",
+      "section": "no_section"
+    },
+    {
+      "name": "Dissolve",
+      "properties": {
+        "vessel": "rotavap",
+        "solvent": "DCM",
+        "volume": "200 mL",
+        "port": null,
+        "temp": "25 \u00b0C",
+        "time": "10 min",
+        "stir_speed": "250 RPM",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "369bf2d1-627d-4190-ade2-ee410c1c188c",
+      "section": "no_section"
+    },
+    {
+      "name": "FilterThrough",
+      "properties": {
+        "from_vessel": "rotavap",
+        "to_vessel": "buffer_flask",
+        "through": null,
+        "eluting_solvent": "DCM",
+        "eluting_volume": "25 mL",
+        "eluting_repeats": "3",
+        "residence_time": null,
+        "move_speed": "5.0",
+        "aspiration_speed": "5.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "7fe890c9-9089-4c3a-969c-ad0b88890c0c",
+      "section": "no_section"
+    },
+    {
+      "name": "Transfer",
+      "properties": {
+        "from_vessel": "buffer_flask",
+        "to_vessel": "rotavap",
+        "volume": "all",
+        "from_port": null,
+        "to_port": null,
+        "through": null,
+        "time": null,
+        "aspiration_speed": "10.0",
+        "move_speed": "40.0",
+        "dispense_speed": "40.0",
+        "viscous": "False",
+        "flush_tubing": "False",
+        "rinsing_solvent": null,
+        "rinsing_volume": null,
+        "rinsing_repeats": "1",
+        "rinse_withdrawal_excess": "0.2",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "b0b26d8a-52e8-46ae-934c-14387f207111",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "rotavap",
+        "solvent": "ether",
+        "volume": "15 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "True",
+        "time": "10 min",
+        "stir_speed": "250 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "3",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "49da178a-51e8-4ea4-902c-5cc172364e9b",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "rotavap",
+        "time": "60 min",
+        "temp": "23 \u00b0C",
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": "100 mbar",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "8e749aff-e775-48a0-b58a-10462ea064d6",
+      "section": "no_section"
+    }
+  ],
+  "reagents": [
+    {
+      "name": "2_6_diisopropylaniline",
+      "properties": {
+        "name": "2_6_diisopropylaniline",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "HOAc",
+      "properties": {
+        "name": "HOAc",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "MeOH",
+      "properties": {
+        "name": "MeOH",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "glyoxal_solution",
+      "properties": {
+        "name": "glyoxal_solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "paraformaldehyde",
+      "properties": {
+        "name": "paraformaldehyde",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "substrate",
+      "properties": {
+        "name": "substrate",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "TMSCl_solution",
+      "properties": {
+        "name": "TMSCl_solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "EtOAc",
+      "properties": {
+        "name": "EtOAc",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "KOtBu_solution",
+      "properties": {
+        "name": "KOtBu_solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "HCE_solution",
+      "properties": {
+        "name": "HCE_solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "THF",
+      "properties": {
+        "name": "THF",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "toluene",
+      "properties": {
+        "name": "toluene",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "DCM",
+      "properties": {
+        "name": "DCM",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "substrateS3",
+      "properties": {
+        "name": "substrateS3",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "KF",
+      "properties": {
+        "name": "KF",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "KBF4",
+      "properties": {
+        "name": "KBF4",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "acetonitrile",
+      "properties": {
+        "name": "acetonitrile",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "ether",
+      "properties": {
+        "name": "ether",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "DCM",
+      "properties": {
+        "name": "DCM",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    }
+  ],
+  "hardware": [
+    {
+      "name": "jacketed_filter",
+      "properties": {
+        "id": "jacketed_filter",
+        "component_type": "filter",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "rotavap",
+      "properties": {
+        "id": "rotavap",
+        "component_type": "rotavap",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "buffer_flask",
+      "properties": {
+        "id": "buffer_flask",
+        "component_type": "flask",
+        "chemical": null,
+        "comment": ""
+      }
+    }
+  ]
+}

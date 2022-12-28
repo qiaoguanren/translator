@@ -1,0 +1,33 @@
+<?xdl version="1.0.0" ?>
+<XDL>
+
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="separator"
+      type="separator" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="water"
+      role="solvent" />
+  </Reagents>
+
+  <Procedure>
+    <Async>
+      <HeatChill
+        vessel="reactor"
+        temp="30 °C"
+        time="10 min" />
+    </Async>
+    <Add
+      vessel="reactor"
+      reagent="water"
+      volume="30 mL" />
+  </Procedure>
+
+</Synthesis>
+
+</XDL>

@@ -1,0 +1,555 @@
+{
+  "metadata": {},
+  "steps": [
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "Oxone deionized water solution",
+        "volume": null,
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": "650.0 mmol",
+        "mass": null,
+        "speed": "40.0",
+        "port": "top",
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "d08072c3-a186-41e0-901d-36d560bd80a4",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "70 \u00b0C",
+        "time": "20 min",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "3d294d3c-c678-4692-a087-4b3eb77e1d0f",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "70 \u00b0C",
+        "time": "3 h",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "1ea3d1c5-d9ad-4754-a449-0dcd5470e0ff",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "filter",
+        "temp": "5 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "a9514f8e-e5e1-4d45-8ffd-87ac3d9da373",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "5 \u00b0C",
+        "time": "1.5 h",
+        "stir": "True",
+        "stir_speed": "50 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "9fe11619-f68f-4fc7-ab9e-7a864b4964c8",
+      "section": "no_section"
+    },
+    {
+      "name": "Filter",
+      "properties": {
+        "vessel": "filter",
+        "wait_time": "2 min",
+        "aspiration_speed": "5.0",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "temp": null,
+        "volume": null,
+        "continue_heatchill": "False",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "43f8802e-39f8-42cc-b6d3-e1e1f739a75e",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "filter",
+        "solvent": "water",
+        "volume": "100 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "solvent",
+        "time": "30 s",
+        "stir_speed": "500 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "6",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "e6750538-6a1c-4d6f-af2e-91dc86d76aa5",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "filter",
+        "solvent": "acetone",
+        "volume": "100 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "solvent",
+        "time": "30 s",
+        "stir_speed": "500 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "2",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "9076e241-e7e1-4674-91c2-631f5128e3b8",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "filter",
+        "time": "5 min",
+        "temp": "25 \u00b0C",
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "758469ae-5bbc-44fb-9cb6-ae59709ab7cd",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "glacial acetic acid",
+        "volume": null,
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": "157.5 g",
+        "mass": null,
+        "speed": "40.0",
+        "port": "top",
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "8589f740-82b4-4058-9ad0-8184a9bb72b1",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "acetic anhydride",
+        "volume": "300 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": "top",
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "80948bce-2639-49d2-a073-4ccd2daa4915",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "85 \u00b0C",
+        "time": "30 min",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "f681bdf9-6591-4a63-8637-7511a9905bea",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "85 \u00b0C",
+        "time": "20 min",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "cc66ed73-a210-4063-8c16-0ea6b85c760a",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "25 \u00b0C",
+        "time": "24 h",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "1b2682de-df03-40ce-8e26-20fae9ade62d",
+      "section": "no_section"
+    },
+    {
+      "name": "Filter",
+      "properties": {
+        "vessel": "filter",
+        "wait_time": "2 min",
+        "aspiration_speed": "5.0",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "temp": null,
+        "volume": null,
+        "continue_heatchill": "False",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "ceef74b3-1382-48f8-afe5-74ef51b22e62",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "filter",
+        "solvent": "anhydrous ether",
+        "volume": "80 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "solvent",
+        "time": "30 s",
+        "stir_speed": "500 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": null,
+        "anticlogging": "False",
+        "repeats": "3",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "bd0dfeaf-3e18-494c-84bb-a426c4916e2d",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "filter",
+        "time": "60 min",
+        "temp": null,
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "44464b36-cd6f-4ac8-b733-e1b3205c193c",
+      "section": "no_section"
+    }
+  ],
+  "reagents": [
+    {
+      "name": "glacial acetic acid",
+      "properties": {
+        "name": "glacial acetic acid",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": 1.05,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "the moist solid iodinane oxide",
+      "properties": {
+        "name": "the moist solid iodinane oxide",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "acetone",
+      "properties": {
+        "name": "acetone",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "Oxone deionized water solution",
+      "properties": {
+        "name": "Oxone deionized water solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": 1.0,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "2-Iodobenzoic acid",
+      "properties": {
+        "name": "2-Iodobenzoic acid",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "anhydrous ether",
+      "properties": {
+        "name": "anhydrous ether",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "acetic anhydride",
+      "properties": {
+        "name": "acetic anhydride",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "water",
+      "properties": {
+        "name": "water",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    }
+  ],
+  "hardware": [
+    {
+      "name": "filter",
+      "properties": {
+        "id": "filter",
+        "component_type": "ChemputerFilter",
+        "chemical": null,
+        "comment": ""
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "acetic_anhydride_volume",
+      "properties": {
+        "id": "acetic_anhydride_volume",
+        "parameter_type": "volume",
+        "min": "250 mL",
+        "max": "350 mL",
+        "value": "200 mL",
+        "comment": ""
+      }
+    },
+    {
+      "name": "dry_temperature_1",
+      "properties": {
+        "id": "dry_temperature_1",
+        "parameter_type": "temperature",
+        "min": "23\u00b0C",
+        "max": "27\u00b0C",
+        "value": "25.0\u00b0C",
+        "comment": ""
+      }
+    }
+  ]
+}

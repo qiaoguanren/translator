@@ -1,0 +1,30 @@
+<Synthesis>
+    <Hardware>
+        <Component id="reactor" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="acid"/>
+        <Reagent name="glycine"/>
+        <Reagent name="salt solution"/>
+        <Reagent name="water"/>
+    </Reagents>
+
+    <!-- Process variables -->
+    <Variables>
+        <!-- A number of reagent volumes adding up to 10 mL -->
+        <ConstantVariable id="const1" value="5.0"/>
+        <RandomSimplexVariable id="simplex1" nvars="5" total="15.0" alpha="0.2"/>
+        <ExponentialVariable id="exp1" start="1" stop="10" n_points="10"/>
+        <LinearVariable id="lin1" start="0.5" stop="1.0" n_points="20"/>
+        <OscillatingVariable
+            id="var1"
+            increment="0.1"
+            init_phase="3.14"
+            amplitude="0.6"/>
+    </Variables>
+
+    <Procedure>
+        <Add reagent="water" vessel="reactor" volume="10 mL"/>
+    </Procedure>
+</Synthesis>

@@ -1,0 +1,119 @@
+stages:
+  - "lint"
+  - "test"
+  - "deploy"
+  - "local_docs"
+
+.before_script_configure_git: &configure_git
+  - git config --global --add safe.directory ${CI_PROJECT_DIR}
+
+.before_script_setup_credentials: &setup_credentials
+  # Setup the credentials #
+
+  # Install and run SSH agent (if not installed already)
+  - command -v ssh-agent >/dev/null || ( apt-get install openssh-client -y )
+  - eval $(ssh-agent -s)
+
+  ## Create the SSH directory
+  - mkdir -p ~/.ssh && chmod 600 ~/.ssh
+
+  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  ## (use tr to fix line endings which makes ed25519 keys work
+  ## without extra base64 encoding.)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - ssh-keyscan -t ed25519 gitlab.com >> ~/.ssh/known_hosts
+
+.before_script_install_stack: &install_stack # Needed for opencv to work
+  - apt-get update
+  - apt-get install -y ffmpeg libsm6 libxext6
+  # General setup
+  - python -V
+  - pip -V
+  - python -m venv venv
+  - . venv/bin/activate
+  # Install xdl requirements
+  # Install Chempiler, SerialLabware and ChemputerAPI for simulations
+
+  - pip install git+ssh://git@gitlab.com/croningroup/chemputer/chempiler.git
+  - pip install git+ssh://git@gitlab.com/croningroup/chemputer/seriallabware.git
+  - pip install git+ssh://git@gitlab.com/croningroup/chemputer/chemputerapi.git
+  - pip install git+ssh://git@gitlab.com/croningroup/chemputer/commanduinolabware.git
+  - pip install git+ssh://git@gitlab.com/croningroup/chemputer/chemputerxdl.git
+  # Install xdl
+  - pip install .[testing]
+  - pip freeze
+
+.test:
+  before_script:
+    - *configure_git
+    - *setup_credentials
+    - *install_stack
+  script:
+    - pytest --cov
+
+test-python:3.7:
+  tags:
+    - docker
+  extends: ".test"
+  stage: "test"
+  image: "python:3.7"
+
+test-python:3.8:
+  tags:
+    - docker
+  extends: ".test"
+  stage: "test"
+  image: "python:3.8"
+
+test-python:3.9:
+  tags:
+    - docker
+  extends: ".test"
+  stage: "test"
+  image: "python:3.9"
+
+lint:
+  tags:
+    - docker
+  stage: "lint"
+  image: "python:3.8"
+
+  script:
+    - pip install flake8
+    - flake8 .
+
+.docs:
+  image: "python:3.8"
+  before_script:
+    - python -V
+    - pip -V
+    - python -m venv venv
+    - . venv/bin/activate
+    - pip install .[docs]
+    - pip freeze
+
+pages:
+  tags:
+    - docker
+  extends: ".docs"
+  stage: "deploy"
+  script:
+    - cd documentation
+    - make html
+    - mv build/html/ ../public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
+local_docs:
+  tags:
+    - docker
+  extends: ".docs"
+  stage: "local_docs"
+  script:
+    - cd documentation
+    - python generate_standard_docs.py
+  except:
+    - master

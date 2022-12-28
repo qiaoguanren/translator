@@ -1,0 +1,40 @@
+<XDL>
+    <Blueprint id="BP1">
+        <Procedure>
+            <Wait time="1"/>
+            <Wait time="10" queue="a"/>
+            <Wait time="5" queue="b"/>
+            <Wait time="3"/>
+        </Procedure>
+    </Blueprint>
+
+    <Synthesis>
+        <Hardware>
+            <Component
+                    id="reactor"
+                    type="reactor" />
+            <Component
+                    id="rotavap"
+                    type="rotavap" />
+            <Component
+                    id="DIAD_vial"
+                    type="flask"
+                    chemical="DIAD" />
+        </Hardware>
+
+        <Reagents>
+            <Reagent name="Z-Hyp-OH" molecular_weight="265.26 g/mol" solid="true" role="reagent"/>
+            <Reagent name="PPh3" molecular_weight="262.29 g/mol" solid="true" role="reagent"/>
+            <Reagent name="DIAD" molecular_weight="202.21 g/mol" solid="true" role="reagent"/>
+            <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+            <Reagent name="diethyl ether" molecular_weight="74.12 g/mol" density="0.706 g/mL" role="solvent"/>
+            <Reagent name="methanol" role="solvent"/>
+        </Reagents>
+
+        <Procedure>
+            <BP1 queue="a"/>
+            <Wait time="2" queue="b"/>
+            <Wait time="0.5" queue="a"/>
+        </Procedure>
+    </Synthesis>
+</XDL>

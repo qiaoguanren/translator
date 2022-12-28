@@ -1,0 +1,34 @@
+<XDL>
+<Synthesis>
+    <Hardware>
+        <Component
+            id="reactor" type="reactor" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <!--step 1-->
+        <Wait
+          time="5 secs"
+        />
+        <!--step 2-->
+        <Add reagent="THF" vessel="reactor" amount="0.5 mL"/>
+        <!--step 3-->
+        <Repeat>
+            <!--steps 4-6 + 7-9 + 10-12 + 13-15-->
+            <Add reagent="THF" vessel="reactor" amount="1 mL"/>
+            <MockMeasure target_repeats="4" comment="long"/>
+            <MockMeasure target_repeats="2" comment="short"/>
+        </Repeat>
+        <!--step 16-->
+        <Add reagent="THF" vessel="reactor" amount="1.5 mL"/>
+        <!--step 17-->
+        <Wait
+          time="10 secs"
+        />
+    </Procedure>
+</Synthesis>
+</XDL>

@@ -1,0 +1,515 @@
+{
+  "metadata": {},
+  "steps": [
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "2-thiophenecarboxaldehyde",
+        "mass": "11.21 g",
+        "amount": null,
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "False",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "423fa277-99c8-49ae-a47d-9a919ff63a23",
+      "section": "no_section"
+    },
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "K2CO3",
+        "mass": "24.19 g",
+        "amount": null,
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "False",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "948affd5-a97a-4e56-ad19-901d25446302",
+      "section": "no_section"
+    },
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "tosylmethylisocyanide",
+        "mass": "21.12 g",
+        "amount": null,
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "False",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "9e00c5be-78e3-4707-9fcd-650553e425d9",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "methanol",
+        "volume": "448 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "2b4a8b59-60fa-4830-af4e-48a11388da44",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "reactor",
+        "temp": "70 \u00b0C",
+        "time": "4 h",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "67c850c5-ea13-4152-87ba-386040933f9f",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "reactor",
+        "temp": "25 \u00b0C",
+        "active": "False",
+        "continue_heatchill": "True",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "8af6b19e-3914-423d-9b80-3f74a59b4f84",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "reactor",
+        "reagent": "water",
+        "volume": "224 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "91d0c8f5-e3ab-454a-9bc8-5da1b7d85200",
+      "section": "no_section"
+    },
+    {
+      "name": "Stir",
+      "properties": {
+        "vessel": "reactor",
+        "time": "10 min",
+        "continue_stirring": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "0457354a-6274-41a8-bc05-344f301022a1",
+      "section": "no_section"
+    },
+    {
+      "name": "Transfer",
+      "properties": {
+        "from_vessel": "reactor",
+        "to_vessel": "rotavap",
+        "volume": "all",
+        "from_port": null,
+        "to_port": "evaporate",
+        "through": null,
+        "time": null,
+        "aspiration_speed": "10.0",
+        "move_speed": "40.0",
+        "dispense_speed": "40.0",
+        "viscous": "False",
+        "flush_tubing": "False",
+        "rinsing_solvent": null,
+        "rinsing_volume": null,
+        "rinsing_repeats": "1",
+        "rinse_withdrawal_excess": "0.2",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "df756924-77d3-4e15-ae73-36edef01df23",
+      "section": "no_section"
+    },
+    {
+      "name": "Evaporate",
+      "properties": {
+        "vessel": "rotavap",
+        "temp": "45 \u00b0C",
+        "pressure": "84 mbar",
+        "time": "30 min",
+        "stir_speed": "150 RPM",
+        "mode": "auto",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "361ad8f9-c401-4ebe-a517-badac72dfc98",
+      "section": "no_section"
+    },
+    {
+      "name": "Separate",
+      "properties": {
+        "purpose": "extract",
+        "from_vessel": "rotavap",
+        "separation_vessel": "separator",
+        "to_vessel": "separator",
+        "product_phase": "top",
+        "solvent": "MTBE",
+        "through": null,
+        "from_port": "evaporate",
+        "to_port": "top",
+        "solvent_volume": "120 mL",
+        "repeats": "3",
+        "waste_phase_to_vessel": null,
+        "waste_phase_to_port": null,
+        "remove_dead_volume": "True",
+        "stir_speed": "600 RPM",
+        "stir_time": "5 min",
+        "settling_time": "5 min",
+        "high_conductivity_phase": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "94e53cfb-2572-4787-9d66-a5c96b298cbb",
+      "section": "no_section"
+    },
+    {
+      "name": "Separate",
+      "properties": {
+        "purpose": "wash",
+        "from_vessel": "separator",
+        "separation_vessel": "separator",
+        "to_vessel": "separator",
+        "product_phase": "top",
+        "solvent": "water",
+        "through": null,
+        "from_port": null,
+        "to_port": "top",
+        "solvent_volume": "50 mL",
+        "repeats": "1",
+        "waste_phase_to_vessel": null,
+        "waste_phase_to_port": null,
+        "remove_dead_volume": "True",
+        "stir_speed": "600 RPM",
+        "stir_time": "5 min",
+        "settling_time": "5 min",
+        "high_conductivity_phase": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "8dd3dc1a-15c3-48ae-b867-196a465fabef",
+      "section": "no_section"
+    },
+    {
+      "name": "Separate",
+      "properties": {
+        "purpose": "wash",
+        "from_vessel": "separator",
+        "separation_vessel": "separator",
+        "to_vessel": "rotavap",
+        "product_phase": "top",
+        "solvent": "saturated NaCl solution",
+        "through": "anhydrous MgSO4",
+        "from_port": null,
+        "to_port": "evaporate",
+        "solvent_volume": "50 mL",
+        "repeats": "1",
+        "waste_phase_to_vessel": null,
+        "waste_phase_to_port": null,
+        "remove_dead_volume": "True",
+        "stir_speed": "600 RPM",
+        "stir_time": "5 min",
+        "settling_time": "5 min",
+        "high_conductivity_phase": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "8f9baf39-5df8-4efd-b4af-cd7227fe5030",
+      "section": "no_section"
+    },
+    {
+      "name": "Evaporate",
+      "properties": {
+        "vessel": "rotavap",
+        "temp": "35 \u00b0C",
+        "pressure": "66.66 mbar",
+        "time": "30 min",
+        "stir_speed": "150 RPM",
+        "mode": "auto",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "70c3cd43-d9ef-45a0-b44d-40ff81984c4a",
+      "section": "no_section"
+    },
+    {
+      "name": "Distill",
+      "properties": {
+        "comment": "",
+        "vessel": "reactor",
+        "temp": "100 \u00b0C",
+        "vapour_temp": "78 \u00b0C"
+      },
+      "children": [],
+      "uuid": "bc78704c-ffb1-423b-8ccc-75d00da41739",
+      "section": "no_section"
+    }
+  ],
+  "reagents": [
+    {
+      "name": "2-thiophenecarboxaldehyde",
+      "properties": {
+        "name": "2-thiophenecarboxaldehyde",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "K2CO3",
+      "properties": {
+        "name": "K2CO3",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "MTBE",
+      "properties": {
+        "name": "MTBE",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "methanol",
+      "properties": {
+        "name": "methanol",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "saturated NaCl solution",
+      "properties": {
+        "name": "saturated NaCl solution",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "tosylmethylisocyanide",
+      "properties": {
+        "name": "tosylmethylisocyanide",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "water",
+      "properties": {
+        "name": "water",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    }
+  ],
+  "hardware": [
+    {
+      "name": "cartridge_anhydrous MgSO4",
+      "properties": {
+        "id": "cartridge_anhydrous MgSO4",
+        "component_type": "cartridge",
+        "chemical": "anhydrous MgSO4",
+        "comment": ""
+      }
+    },
+    {
+      "name": "reactor",
+      "properties": {
+        "id": "reactor",
+        "component_type": "reactor",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "rotavap",
+      "properties": {
+        "id": "rotavap",
+        "component_type": "rotavap",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "separator",
+      "properties": {
+        "id": "separator",
+        "component_type": "separator",
+        "chemical": null,
+        "comment": ""
+      }
+    }
+  ]
+}

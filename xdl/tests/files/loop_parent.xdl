@@ -1,0 +1,21 @@
+<Synthesis>
+
+  <Hardware>
+  </Hardware>
+
+  <Reagents>
+  </Reagents>
+
+  <Procedure>
+    <Loop
+    >
+      <Wait
+        time="5 secs"
+      />
+      <Wait
+        time="10 secs"
+      />
+    </Loop>
+  </Procedure>
+
+</Synthesis>

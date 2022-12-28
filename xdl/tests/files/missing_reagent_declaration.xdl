@@ -1,0 +1,24 @@
+<XDL>
+<Synthesis>
+    <Hardware>
+      <Component id="reactor" type="reactor"/>
+      <Component id="reactor2" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="3,5-bis(trifluoromethyl)bromobenzene" molecular_weight="293 g/mol" density='1.699 g/ml' role="reagent"/>
+      </Reagents>
+
+    <Parameters>
+    </Parameters>
+
+    <Procedure>
+      <Add
+        vessel='reactor2'
+        reagent='acetone'
+        volume='10 mL'
+      />
+    </Procedure>
+
+</Synthesis>
+</XDL>

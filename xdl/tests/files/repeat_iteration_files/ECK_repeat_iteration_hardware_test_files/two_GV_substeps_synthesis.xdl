@@ -1,0 +1,38 @@
+<XDL>
+
+    <Synthesis>
+
+      <Hardware>
+          <Component id='reactor' type='reactor'/>
+          <Component id='UVVis' type='reactor'/>
+      </Hardware>
+
+      <Reagents>
+        <Reagent
+          name="reagent_12"
+          role="substrate" />
+        <Reagent
+          name="reagent_13"
+          role="substrate" />
+        <Reagent
+          name="reagent_14"
+          role="substrate" />
+        <Reagent
+          name="reagent_15"
+          role="solvent" />
+        <Reagent
+          name="solvent"
+          role="solvent" />
+      </Reagents>
+
+      <Procedure>
+         <!-- should match reagent 15 with reactor and solvent with UVVis -->
+        <Repeat rc.type='reactor'  sol.role='solvent'>
+          <Dissolve
+            vessel='rc'
+            solvent='sol'
+            volume='3 mL'/>
+        </Repeat>
+      </Procedure>
+    </Synthesis>
+    </XDL>

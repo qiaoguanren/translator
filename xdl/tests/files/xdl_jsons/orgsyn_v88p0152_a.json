@@ -1,0 +1,289 @@
+{
+  "metadata": {},
+  "steps": [
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "benzyl carbamate",
+        "mass": "30.23 g",
+        "amount": null,
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "False",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "2ce07e0e-482f-4474-a747-e785564b3961",
+      "section": "no_section"
+    },
+    {
+      "name": "AddSolid",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "glyoxylic acid monohydrate",
+        "mass": "20.25 g",
+        "amount": null,
+        "mol": null,
+        "time": null,
+        "portions": "1",
+        "stir": "False",
+        "stir_speed": null,
+        "confirm_solid": "True",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "5a75adb4-b6c3-4549-a9fa-fcb6816099e8",
+      "section": "no_section"
+    },
+    {
+      "name": "EvacuateAndRefill",
+      "properties": {
+        "vessel": "filter",
+        "gas": null,
+        "repeats": "3",
+        "after_inert_gas_wait_time": "60 s",
+        "after_vacuum_wait_time": "60 s",
+        "vacuum_pressure": "50 mbar",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "a3678d61-e5e6-4ec9-84b7-006534062fa6",
+      "section": "no_section"
+    },
+    {
+      "name": "Add",
+      "properties": {
+        "vessel": "filter",
+        "reagent": "anhydrous Et2O",
+        "volume": "200 mL",
+        "viscous": "False",
+        "dropwise": "False",
+        "time": null,
+        "stir": "False",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "amount": null,
+        "mass": null,
+        "speed": "40.0",
+        "port": null,
+        "through": null,
+        "move_speed": "40.0",
+        "aspiration_speed": "10.0",
+        "dispense_speed": "40.0",
+        "anticlogging": "False",
+        "anticlogging_solvent": null,
+        "anticlogging_solvent_volume": "2 mL",
+        "anticlogging_reagent_volume": "10 mL",
+        "prime_n_times": "1",
+        "priming_volume": "3 mL",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "6fdac783-5448-4a11-843f-697cc301ce4f",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChill",
+      "properties": {
+        "vessel": "filter",
+        "temp": "34.5 \u00b0C",
+        "time": "12 h",
+        "stir": "True",
+        "stir_speed": "200 RPM",
+        "purpose": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "6fdf81ae-08bf-4739-8255-89897cd218d0",
+      "section": "no_section"
+    },
+    {
+      "name": "HeatChillToTemp",
+      "properties": {
+        "vessel": "filter",
+        "temp": "25 \u00b0C",
+        "active": "True",
+        "continue_heatchill": "False",
+        "stir": "True",
+        "stir_speed": "250 RPM",
+        "purpose": null,
+        "wait_recording_speed": "2000.0",
+        "after_recording_speed": "14.0",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "dde15a82-246f-4ef1-b687-0159515c8209",
+      "section": "no_section"
+    },
+    {
+      "name": "Filter",
+      "properties": {
+        "vessel": "filter",
+        "wait_time": "2 min",
+        "aspiration_speed": "5.0",
+        "stir": "True",
+        "stir_speed": "500 RPM",
+        "filtrate_vessel": "flask_washings",
+        "anticlogging": "False",
+        "temp": null,
+        "volume": null,
+        "continue_heatchill": "False",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "9de9756f-7698-4f68-ab00-1531d224839b",
+      "section": "no_section"
+    },
+    {
+      "name": "WashSolid",
+      "properties": {
+        "vessel": "filter",
+        "solvent": "hexanes-Et2O",
+        "volume": "20 mL",
+        "temp": null,
+        "vacuum_time": "10 s",
+        "stir": "True",
+        "time": "30 s",
+        "stir_speed": "500 RPM",
+        "aspiration_speed": "5.0",
+        "filtrate_vessel": "flask_washings",
+        "anticlogging": "False",
+        "repeats": "6",
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "781dab16-9524-48c2-a1c1-24adbd34cd90",
+      "section": "no_section"
+    },
+    {
+      "name": "Dry",
+      "properties": {
+        "vessel": "filter",
+        "time": "60 min",
+        "temp": null,
+        "waste_vessel": null,
+        "aspiration_speed": "5.0",
+        "continue_heatchill": "False",
+        "pressure": null,
+        "comment": ""
+      },
+      "children": [],
+      "uuid": "1dc170f7-5293-4678-be6d-6306dcb2d08f",
+      "section": "no_section"
+    }
+  ],
+  "reagents": [
+    {
+      "name": "anhydrous Et2O",
+      "properties": {
+        "name": "anhydrous Et2O",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    },
+    {
+      "name": "benzyl carbamate",
+      "properties": {
+        "name": "benzyl carbamate",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "glyoxylic acid monohydrate",
+      "properties": {
+        "name": "glyoxylic acid monohydrate",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": true,
+        "comment": ""
+      }
+    },
+    {
+      "name": "hexanes-Et2O",
+      "properties": {
+        "name": "hexanes-Et2O",
+        "inchi": null,
+        "cas": null,
+        "molecular_formula": null,
+        "molecular_weight": null,
+        "density": null,
+        "concentration": null,
+        "role": "reagent",
+        "preserve": false,
+        "use_for_cleaning": false,
+        "clean_with": null,
+        "stir": false,
+        "temp": null,
+        "atmosphere": null,
+        "purity": null,
+        "solid": false,
+        "comment": ""
+      }
+    }
+  ],
+  "hardware": [
+    {
+      "name": "filter",
+      "properties": {
+        "id": "filter",
+        "component_type": "filter",
+        "chemical": null,
+        "comment": ""
+      }
+    },
+    {
+      "name": "flask_washings",
+      "properties": {
+        "id": "flask_washings",
+        "component_type": "flask",
+        "chemical": null,
+        "comment": ""
+      }
+    }
+  ]
+}

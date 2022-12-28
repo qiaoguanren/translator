@@ -1,0 +1,91 @@
+<Synthesis>
+    <Hardware>
+        <Component id="reactor_01" type="reactor"/>
+        <Component id="reactor_02" type="reactor"/>
+        <Component id="reactor_03" type="reactor"/>
+        <Component id="modular_wheel" type="modular_wheel" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="water" molecular_weight="18.0153 g/mol" density="1 g/mL"/>
+        <Reagent name="acetonitrile_water" concentration="2.6 mol/L" density="0.7822 g/mL"/>
+        <Reagent name="histidine" solid="true" molecular_weight="155.155 g/mol"/>
+    </Reagents>
+
+    <Procedure>
+    <!--
+        Very simple Add step, just adding a volume of a reagent. The extra Reagent props are
+        not used here. Insert a few other unrelated steps, just to show it can work in a semi-
+        realistic synthesis -->
+        <Add
+            vessel="reactor_01"
+            reagent="water"
+            volume="1 mL"
+            />
+        <CMove
+            from_vessel="reactor_01"
+            to_vessel="reactor_02"
+            volume="0.5 mL"
+            />
+        <!-- Test adding a solid reagent using the new combined Add step-->
+        <Add
+            vessel="reactor_02"
+            reagent="histidine"
+            amount="0.02 g"
+            />
+        <!--Test Add with mols-->
+        <Add
+            vessel="reactor_03"
+            reagent="water"
+            amount="50 mmol"
+        />
+        <Add
+            vessel="reactor_03"
+            reagent="acetonitrile_water"
+            amount="15.6 mmol"
+        />
+
+        <Add
+            vessel="reactor_02"
+            reagent="histidine"
+            amount="0.005 mol"
+        />
+        <!--Test Add with mass -->
+        <Add
+            vessel="reactor_01"
+            reagent="water"
+            amount="300 mg"
+        />
+
+        <Add
+            vessel="reactor_02"
+            reagent="histidine"
+            amount="0.1 g"
+        />
+
+        <Add
+            vessel="reactor_01"
+            reagent="acetonitrile_water"
+            amount="0.25 g"
+        />
+
+    <!--
+        Add equivalents tests. Do this for multiple equivalence references and
+        amounts
+    -->
+        <Add
+            vessel="reactor_03"
+            reagent="water"
+            amount="3.6 equivalents"
+            />
+        <Add
+            vessel="reactor_01"
+            reagent="acetonitrile_water"
+            amount="2 eq"/>
+        <Add
+            vessel="reactor_02"
+            reagent="histidine"
+            amount="0.2 eq"
+        />
+    </Procedure>
+</Synthesis>

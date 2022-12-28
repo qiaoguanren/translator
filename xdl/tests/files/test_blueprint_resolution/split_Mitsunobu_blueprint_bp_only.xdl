@@ -1,0 +1,91 @@
+<XDL>
+<Blueprint id="Cyclic_Mitsunobu_Split">
+    <Hardware>
+        <Component id="reactor" type="reactor"/>
+        <Component id="azodicarboxylate_vial" type="reactor"/>
+    </Hardware>
+
+    <Parameters>
+        <Parameter id="reaction_time" type="time" value="8 h"/>
+        <Parameter id="reaction_temp" type="temp" value="25 °C"/>
+        <Parameter id="reaction_volume" type="volume" value="16.2 mL"/>
+        <Parameter id="precipitate_volume" type="volume" value="20 mL"/>
+    </Parameters>
+
+    <Reagents>
+        <!-- reagent should contain both alcohol and nucleophile-->
+        <Reagent id="reagent"/>
+        <Reagent id="phosphine"/>
+        <Reagent id="azodicarboxylate"/>
+        <Reagent id="reaction_solvent"/>
+        <Reagent id="precipitate_solvent"/>
+    </Reagents>
+
+    <Procedure>
+        <!-- Dissolve reagent and phosphine -->
+        <Add reagent="reagent" vessel="reactor" amount="1 eq"/>
+        <Add reagent="phosphine" vessel="reactor" amount="1.197 eq"/>
+        <Dissolve
+            vessel="reactor"
+            solvent="reaction_solvent"
+            param.volume="reaction_volume"
+            time="60 s"/>
+
+        <!-- prepare azodicarboxylate then add to reactor -->
+        <Dissolve
+            vessel="azodicarboxylate_vial"
+            solvent="THF"
+            volume="2 mL"
+            time="60 s" />
+        <HeatChillToTemp vessel="reactor" temp="0 °C" stir="True" />
+        <Transfer
+            from_vessel="azodicarboxylate_vial"
+            to_vessel="reactor"
+            volume="all"
+            time="10 min"
+            rinsing_volume="1 mL"
+            rinsing_repeats="3"
+            rinse_withdrawal_excess="0.0" />
+
+        <ResetHandling
+            solvent="reaction_solvent" />
+        <ResetHandling
+            solvent="precipitate_solvent" />
+
+        <!-- do reaction, concentrate and then precipitate product -->
+        <HeatChill
+            vessel="reactor"
+            param.temp="reaction_temp"
+            param.time="reaction_time"
+            stir="True" />
+        <Evaporate
+            vessel="reactor"
+            temp="45 °C"
+            time="1 h"
+            pressure="50 mbar"
+            mode="auto" />
+
+        <Dissolve
+            vessel="reactor"
+            solvent="precipitate_solvent"
+            param.volume="precipitate_volume"
+            time="5 min" />
+
+    </Procedure>
+</Blueprint>
+
+<Blueprint id="Single_Add_Split">
+    <Hardware>
+        <Component id="reactor_vessel" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <!-- reagent should contain both alcohol and nucleophile-->
+        <Reagent id="addition_reagent"/>
+    </Reagents>
+
+    <Procedure>
+        <Add reagent="addition_reagent" vessel="reactor" amount="1 mL"/>
+    </Procedure>
+</Blueprint>
+</XDL>

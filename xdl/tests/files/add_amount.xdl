@@ -1,0 +1,45 @@
+<Synthesis>
+  <Hardware>
+    <Component
+      id="rotavap"
+      type="rotavap"
+    />
+    <Component
+      id="reactor"
+      type="reactor"
+    />
+
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="ether"
+      density="2.6 g/mL"
+      concentration="56.435 mol/L"
+      molecular_weight="46.07 g/mol"/>
+    <Reagent
+      name="NaCl"
+      solid="true"
+      molecular_weight="58.443  g/mol"/>
+  </Reagents>
+
+  <Procedure>
+    <Add
+      vessel="rotavap"
+      reagent="ether"
+      amount="1200 mg"/>
+     <Add
+      vessel="rotavap"
+      reagent="ether"
+      amount="2 mol"/>
+      <Add
+      vessel="rotavap"
+      reagent="ether"
+      mass="68 g"/>
+      <Add
+      vessel="rotavap"
+      reagent="NaCl"
+      amount="2 mol"/>
+  </Procedure>
+
+</Synthesis>

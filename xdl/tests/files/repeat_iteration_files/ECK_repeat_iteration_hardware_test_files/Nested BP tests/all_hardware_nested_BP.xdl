@@ -1,0 +1,118 @@
+<XDL>
+
+  <Blueprint id="Nested_Repeat_BP">
+
+    <Hardware>
+      <Component id='reactor_NBP' type='reactor'/>
+      <Component id='UVVis_NBP' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        id="reagent_12_NBP"
+        role="substrate" />
+      <Reagent
+        id="reagent_13_NBP"
+        role="substrate" />
+      <Reagent
+        id="reagent_14_NBP"
+        role="substrate" />
+      <Reagent
+        id="reagent_15_NBP"
+        role="substrate" />
+      <Reagent
+        id="solvent_NBP"
+        role="solvent" />
+    </Reagents>
+
+    <Procedure>
+      <Repeat_BP
+          reagent_12_BP="reagent_12_NBP"
+          reagent_13_BP="reagent_13_NBP"
+          reagent_14_BP="reagent_14_NBP"
+          reagent_15_BP="reagent_15_NBP"
+          solvent_BP="solvent_NBP"
+          reactor_BP="reactor_NBP"
+          UVVis_BP="UVVis_NBP"
+        />
+    </Procedure>
+  </Blueprint>
+
+  <Blueprint id="Repeat_BP">
+    <Hardware>
+      <Component id='reactor_BP' type='reactor'/>
+      <Component id='UVVis_BP' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        id="reagent_12_BP"
+        role="substrate" />
+      <Reagent
+        id="reagent_13_BP"
+        role="substrate" />
+      <Reagent
+        id="reagent_14_BP"
+        role="substrate" />
+      <Reagent
+        id="reagent_15_BP"
+        role="substrate" />
+      <Reagent
+        id="solvent_BP"
+        role="solvent" />
+    </Reagents>
+
+    <Procedure>
+      <Repeat rc.kind='Hardware'>
+        <Add reagent='reagent_15' vessel='rc' amount='1 mL'/>
+      </Repeat>
+
+      <Wait time="2 secs" />
+    </Procedure>
+  </Blueprint>
+
+  <Synthesis>
+
+    <Hardware>
+        <Component id='reactor' type='reactor'/>
+        <Component id='UVVis' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        name="reagent_12"
+        role="substrate" />
+      <Reagent
+        name="reagent_13"
+        role="substrate" />
+      <Reagent
+        name="reagent_14"
+        role="substrate" />
+      <Reagent
+        name="reagent_15"
+        role="substrate" />
+      <Reagent
+        name="solvent"
+        role="solvent" />
+    </Reagents>
+
+    <Procedure>
+      <Transfer
+          from_vessel="reactor"
+          to_vessel="UVVis"
+          amount="0.8 mL"
+      />
+      <Nested_Repeat_BP
+        reagent_12_NBP="reagent_12"
+        reagent_13_NBP="reagent_13"
+        reagent_14_NBP="reagent_14"
+        reagent_15_NBP="reagent_15"
+        solvent_NBP="solvent"
+        reactor_NBP="reactor"
+        UVVis_NBP="UVVis"
+        />
+      <Wait time="5 secs" />
+    </Procedure>
+
+  </Synthesis>
+</XDL>

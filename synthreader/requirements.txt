@@ -1,1 +1,0 @@
-git+ssh://git@gitlab.com/croningroup/chemputer/chempiler.git

@@ -1,0 +1,43 @@
+<XDL>
+<Blueprint id="GrignardExchange">
+    <Hardware>
+      <Component id="reactor" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent id="aryl_bromide" />
+    </Reagents>
+
+    <Procedure>
+        <Add
+          vessel='reactor'
+          reagent='aryl_bromide'
+          amount='1.0 eq.' />
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+      <Component id="reactor" type="reactor"/>
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="3,5-bis(trifluoromethyl)bromobenzene" molecular_weight="293 g/mol" density='1.699 g/ml' role="substrate"/>
+        <Reagent name="reagent_2" role="reagent" molecular_weight="100 g/mol"/>
+        <Reagent name="reagent_3" role="reagent" molecular_weight="110 g/mol"/>
+        <Reagent name="reagent_4" role="solvent" molecular_weight="120 g/mol"/>
+      </Reagents>
+
+    <Procedure>
+      <Repeat equiv_reagent.role='reagent'>
+        <GrignardExchange
+            reactor='reactor'
+            aryl_bromide='equiv_reagent'
+            equiv_reference="aryl_bromide"
+            equiv_amount="10 mmol"
+        />
+      </Repeat>
+    </Procedure>
+
+</Synthesis>
+</XDL>

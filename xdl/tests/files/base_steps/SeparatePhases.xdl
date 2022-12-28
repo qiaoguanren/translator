@@ -1,0 +1,44 @@
+<?xdl version="1.0.0" ?>
+<XDL>
+
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="separator"
+      type="separator" />
+    <Component
+      id="buffer_flask1"
+      type="flask" />
+    <Component
+      id="buffer_flask2"
+      type="flask" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="water"
+      role="solvent" />
+    <Reagent
+      name="etoac"
+      role="solvent" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      vessel="separator"
+      reagent="water"
+      volume="30 mL" />
+    <Add
+      vessel="separator"
+      reagent="etoac"
+      volume="30 mL" />
+    <SeparatePhases
+      separation_vessel="separator"
+      lower_phase_vessel="buffer_flask1"
+      upper_phase_vessel="buffer_flask2" />
+  </Procedure>
+
+</Synthesis>
+
+</XDL>

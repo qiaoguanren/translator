@@ -1,0 +1,105 @@
+<XDL>
+<Blueprint id="Cyclic_Mitsunobu">
+    <Hardware>
+        <Component id="reactor" type="reactor"/>
+    </Hardware>
+
+    <!-- INTERNAL BLUEPRINT PARAMETERS -->
+    <Parameters>
+
+        <!-- internal blueprint parameter with unused default value -->
+        <Parameter id="reaction_time" type="time" value="1 hour"/>
+
+        <!-- internal blueprint parameter with USED default value -->
+        <Parameter id="reaction_temp" type="temp" value="25 °C"/>
+
+        <Parameter id="reaction_volume" type="volume"/>
+        <Parameter id="precipitate_volume" type="volume"/>
+    </Parameters>
+
+    <Reagents>
+        <Reagent id="reagent"/>
+        <Reagent id="phosphine"/>
+        <Reagent id="reaction_solvent"/>
+        <Reagent id="precipitate_solvent"/>
+    </Reagents>
+
+    <Procedure>
+
+        <Add reagent="reagent" vessel="reactor" amount="1 eq"/>
+        <Add reagent="phosphine" vessel="reactor" amount="1.197 eq"/>
+
+        <Dissolve
+            vessel="reactor"
+            solvent="reaction_solvent"
+            param.volume="reaction_volume"
+            time="10 min" />
+
+        <!-- USE OF BLUEPRINT SPECIFIC PARAMETERS with defaults (default and not default)-->
+        <HeatChill
+            vessel="reactor"
+            param.temp="reaction_temp"
+            param.time="reaction_time"
+            stir="True" />
+
+        <!-- USE OF BLUEPRINT SPECIFIC PARAMETERS with no default -->
+        <Dissolve
+            vessel="reactor"
+            solvent="precipitate_solvent"
+            param.volume="precipitate_volume"
+            time="5 min" />
+
+    </Procedure>
+</Blueprint>
+
+<Synthesis>
+    <Hardware>
+        <Component id="reactor" type="reactor" />
+    </Hardware>
+
+    <Reagents>
+        <Reagent name="Z-Hyp-OH" molecular_weight="265.26 g/mol" solid="true" role="reagent"/>
+        <Reagent name="PPh3" molecular_weight="262.29 g/mol" solid="true" role="reagent"/>
+        <Reagent name="THF" molecular_weight="72.11 g/mol" density="0.889 g/mL" role="solvent"/>
+        <Reagent name="diethyl ether" molecular_weight="74.12 g/mol" density="0.706 g/mL" role="solvent"/>
+    </Reagents>
+
+    <Parameters>
+        <Parameter id="reaction_time" type="time" value="3 mins"/>
+        <Parameter id="precipitate_volume" type="volume"/>
+    </Parameters>
+
+    <Procedure>
+        <!-- NO VALUE FOR precipitate_volume -->
+        <Cyclic_Mitsunobu
+            reagent="Z-Hyp-OH"
+            phosphine="PPh3"
+            reactor="reactor"
+            equiv_reference="reagent"
+            equiv_amount="3.5 mmol"
+            reaction_solvent="THF"
+            precipitate_solvent="diethyl ether"
+            reaction_time="8 h"
+            reaction_volume="5 mL"
+            param.precipitate_volume="precipitate_volume"
+        />
+        <!-- MAPPING OF GLOBAL PARAMETERS (precipitate_volume) -->
+
+        <!-- value for precipitate_volume this time -->
+        <Cyclic_Mitsunobu
+            reagent="Z-Hyp-OH"
+            phosphine="PPh3"
+            reactor="reactor"
+            equiv_reference="reagent"
+            equiv_amount="7 mmol"
+            reaction_solvent="THF"
+            precipitate_solvent="diethyl ether"
+            reaction_time="16 h"
+            reaction_volume="10 mL"
+        />
+
+        <!-- USE OF GLOBAL PARAMETERS FOR ANOTHER STEP -->
+        <Wait param.time="reaction_time"/>
+    </Procedure>
+</Synthesis>
+</XDL>

@@ -1,0 +1,74 @@
+<XDL>
+
+  <Blueprint id="Repeat_BP">
+    <Hardware>
+      <Component id='reactor_BP' type='flask'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        id="reagent_12_BP"
+        role="substrate" />
+      <Reagent
+        id="reagent_13_BP"
+        role="substrate" />
+      <Reagent
+        name="reagent_33"
+        role="solvent" />
+    </Reagents>
+
+    <Procedure>
+      <Repeat rc.type='flask'  sol.role='solvent'>
+        <Dissolve
+          vessel='rc'
+          solvent='sol'
+          volume='3 mL'/>
+      </Repeat>
+    </Procedure>
+  </Blueprint>
+
+  <Synthesis>
+
+    <Hardware>
+        <Component id='reactor' type='reactor'/>
+        <Component id='UVVis' type='reactor'/>
+    </Hardware>
+
+    <Reagents>
+      <Reagent
+        name="reagent_12"
+        role="substrate" />
+      <Reagent
+        name="reagent_13"
+        role="substrate" />
+      <Reagent
+        name="reagent_14"
+        role="substrate" />
+      <Reagent
+        name="reagent_15"
+        role="solvent" />
+      <Reagent
+        name="solvent"
+        role="acid" />
+      <Reagent
+        name="reagent_33"
+        role="solvent" />
+    </Reagents>
+
+    <Procedure>
+      <Transfer
+          from_vessel="reactor"
+          to_vessel="UVVis"
+          amount="0.8 mL"
+      />
+      <Repeat_BP
+        reagent_12_BP="reagent_12"
+        reagent_13_BP="reagent_13"
+        reagent_33="solvent"
+        reactor_BP="reactor"
+        />
+      <Wait time="5 secs" />
+    </Procedure>
+
+  </Synthesis>
+</XDL>
