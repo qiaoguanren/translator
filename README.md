@@ -1,4 +1,4 @@
 # translator
-化学描述自动合成语言
+Chemistry describes auto-synthesis language
 
-只需安装XDL synthreader即可
+Just install XDL synthreader and you're good to run codes
